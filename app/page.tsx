@@ -2,7 +2,6 @@ import HeroSection from '@/components/home/HeroSection';
 import ServicesGrid from '@/components/home/ServicesGrid';
 import EventChronicles from '@/components/home/EventChronicles';
 import Testimonials from '@/components/home/Testimonials';
-import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <ServicesGrid />
       <EventChronicles />
       <Testimonials />
-      <Footer />
     </div>
   );
 }
