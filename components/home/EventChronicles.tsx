@@ -26,7 +26,7 @@ export default function EventChronicles() {
           </div>
 
           <button className="absolute right-0 top-1/2 -translate-y-1/2 -mr-12 z-10 p-2 text-[#E8D08D] hover:text-white transition-colors hidden md:block">
-             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9 5l7 7-7 7"></path></svg>
+             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9 5l7 7-7 7"></path></svg>
           </button>
         </div>
       </div>

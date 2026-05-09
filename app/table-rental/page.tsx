@@ -12,17 +12,17 @@ export const metadata = {
 
 export default function TableRentalPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#0F172A]">
       {/* Hero Section */}
       <RentalHero title="Table Rental" />
 
       {/* Filter Bar - Custom for Tables */}
-      <div className="bg-white py-8 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex justify-center gap-4 px-4">
+      <div className="bg-[#0F172A] py-8 border-b border-white/5">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 px-4">
           {['ALL TABLES', 'ROUND', 'RECTANGLE', 'COCKTAIL'].map((filter) => (
             <button 
               key={filter}
-              className="bg-[#2ecc71] hover:bg-[#27ae60] text-white px-8 py-2 rounded-sm font-bold text-sm tracking-widest transition-colors uppercase shadow-sm"
+              className="border border-[#B48E4B]/40 text-[#E8D08D] hover:bg-[#B48E4B] hover:text-[#0F172A] px-10 py-3 rounded-full font-black text-xs tracking-[0.2em] transition-all duration-300 uppercase shadow-lg shadow-[#B48E4B]/5 active:scale-95"
             >
               {filter}
             </button>
@@ -31,9 +31,9 @@ export default function TableRentalPage() {
       </div>
 
       {/* Introduction */}
-      <section className="py-12 bg-white px-4">
+      <section className="py-20 bg-[#131B2E] border-y border-white/5 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gray-600 text-lg leading-relaxed italic">
+          <p className="text-gray-300 text-xl leading-relaxed italic font-medium opacity-90">
             "Tables are essential for any event, providing the foundation for dining, displays, and networking. Explore our wide selection of high-quality tables and custom skirting options."
           </p>
         </div>

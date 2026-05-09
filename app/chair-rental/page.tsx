@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function ChairRentalPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#0F172A]">
       {/* Hero Section */}
       <RentalHero title="Chair Rental" />
 
@@ -20,9 +20,9 @@ export default function ChairRentalPage() {
       <FilterBar />
 
       {/* Introduction */}
-      <section className="py-12 bg-white px-4">
+      <section className="py-20 bg-[#131B2E] border-y border-white/5 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gray-600 text-lg leading-relaxed italic">
+          <p className="text-gray-300 text-xl leading-relaxed italic font-medium opacity-90">
             "Looking for high-quality seating for your next event? We offer a wide range of premium chairs suitable for any occasion, from corporate functions to elegant weddings. Explore our collection below."
           </p>
         </div>

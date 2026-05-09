@@ -81,16 +81,16 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
-    <nav className="flex items-center justify-between px-4 lg:px-8 h-24 bg-white border-b border-gray-200 sticky top-0 z-[100]">
+    <nav className="flex items-center justify-between px-4 lg:px-8 h-24 bg-[#0F172A] border-b border-white/5 sticky top-0 z-[100]">
       {/* Logo */}
       <div className="flex-shrink-0 h-full">
         <Link href="/" className="block h-full py-1">
-          <Image 
-            src="/forteeventsolutions_logo.jpeg" 
-            alt="Forte Event Solutions Logo" 
-            width={300} 
-            height={100} 
-            className="object-contain h-full w-auto"
+          <Image
+            src="/forteeventsolutions_logo.jpeg"
+            alt="Forte Event Solutions Logo"
+            width={300}
+            height={100}
+            className="object-contain h-full w-auto brightness-150"
             priority
           />
         </Link>
@@ -98,30 +98,30 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <div className="hidden lg:flex items-center space-x-7 text-[15px] h-full">
-        <Link href="/" className="font-bold text-black tracking-tight">Home</Link>
-        
+        <Link href="/" className="font-bold text-white tracking-tight">Home</Link>
+
         {/* Chair & Table Rental Dropdown */}
-        <div 
+        <div
           className="relative h-full flex items-center group"
           onMouseEnter={() => setActiveMenu('chair')}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <Link href="/chair-table-rental" className="font-semibold text-gray-400 group-hover:text-black transition-colors tracking-tight">
+          <Link href="/chair-table-rental" className="font-semibold text-gray-400 group-hover:text-white transition-colors tracking-tight">
             Chair & Table Rental
           </Link>
           <AnimatePresence>
             {activeMenu === 'chair' && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
-                className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-gray-100 py-8 px-20 flex justify-between z-[110]"
+                className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-[#1e293b] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 py-8 px-20 flex justify-between z-[110]"
               >
-                <Link href="/chair-rental" className="text-lg font-bold text-black hover:text-yellow-600 transition-colors">
+                <Link href="/chair-rental" className="text-lg font-bold text-white hover:text-[#B48E4B] transition-colors">
                   Chair Rental
                 </Link>
-                <Link href="/table-rental" className="text-lg font-bold text-black hover:text-yellow-600 transition-colors">
+                <Link href="/table-rental" className="text-lg font-bold text-white hover:text-[#B48E4B] transition-colors">
                   Table Rental
                 </Link>
               </motion.div>
@@ -130,62 +130,62 @@ export default function Navbar() {
         </div>
 
         {/* Portable Tent Mega Menu */}
-        <div 
+        <div
           className="relative h-full flex items-center group"
           onMouseEnter={() => setActiveMenu('tent')}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <Link href="/portable-tent" className="font-semibold text-gray-400 group-hover:text-black transition-colors tracking-tight">
+          <Link href="/portable-tent" className="font-semibold text-gray-400 group-hover:text-white transition-colors tracking-tight">
             Portable Tent
           </Link>
           <AnimatePresence>
             {activeMenu === 'tent' && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-[#fffef0] shadow-[0_25px_60px_rgba(0,0,0,0.15)] border border-yellow-100/50 py-8 px-10 z-[110] rounded-b-xl"
+                className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-[#1e293b] shadow-[0_25px_60px_rgba(0,0,0,0.4)] border border-white/10 py-8 px-10 z-[110] rounded-b-xl"
               >
                 <div className="grid grid-cols-1 gap-10">
                   {TENT_DATA.map((tent, index) => (
                     <div key={index} className="space-y-3">
                       <div className="grid grid-cols-2 gap-4">
                         {/* Open Variant */}
-                        <motion.div 
+                        <motion.div
                           whileHover={{ y: -3 }}
-                          className="relative aspect-[16/10] bg-white rounded shadow-sm border border-yellow-100 overflow-hidden group/img"
+                          className="relative aspect-[16/10] bg-gray-800 rounded shadow-sm border border-white/10 overflow-hidden group/img"
                         >
-                          <Image 
-                            src={tent.openImage} 
-                            alt={`${tent.title} open`} 
-                            fill 
+                          <Image
+                            src={tent.openImage}
+                            alt={`${tent.title} open`}
+                            fill
                             className="object-cover transition-transform duration-700 group-hover/img:scale-105"
                           />
-                          <div className="absolute inset-0 bg-black/5 opacity-0 group-hover/img:opacity-100 transition-opacity" />
+                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity" />
                         </motion.div>
 
                         {/* Walled Variant */}
-                        <motion.div 
+                        <motion.div
                           whileHover={{ y: -3 }}
-                          className="relative aspect-[16/10] bg-white rounded shadow-sm border border-yellow-100 overflow-hidden group/img"
+                          className="relative aspect-[16/10] bg-gray-800 rounded shadow-sm border border-white/10 overflow-hidden group/img"
                         >
-                          <Image 
-                            src={tent.walledImage} 
-                            alt={`${tent.title} with walls`} 
-                            fill 
+                          <Image
+                            src={tent.walledImage}
+                            alt={`${tent.title} with walls`}
+                            fill
                             className="object-cover transition-transform duration-700 group-hover/img:scale-105"
                           />
-                          <div className="absolute inset-0 bg-black/5 opacity-0 group-hover/img:opacity-100 transition-opacity" />
+                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity" />
                         </motion.div>
                       </div>
-                      
+
                       {/* Caption Section */}
                       <div className="text-center">
-                        <h3 className="text-[12px] font-black text-black uppercase tracking-widest mb-0.5 italic leading-none">
+                        <h3 className="text-[12px] font-black text-white uppercase tracking-widest mb-0.5 italic leading-none">
                           {tent.title}
                         </h3>
-                        <p className="text-[9px] text-gray-700 font-bold leading-tight">
+                        <p className="text-[9px] text-gray-400 font-bold leading-tight">
                           — {tent.caption}
                         </p>
                       </div>
@@ -198,35 +198,35 @@ export default function Navbar() {
         </div>
 
         {/* Tentage Rental Horizontal Mega Menu */}
-        <div 
+        <div
           className="relative h-full flex items-center group"
           onMouseEnter={() => setActiveMenu('tentage')}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <Link href="/tentage-rental" className="font-bold text-black tracking-tight">
+          <Link href="/tentage-rental" className="font-bold text-white tracking-tight">
             Tentage Rental
           </Link>
           <AnimatePresence>
             {activeMenu === 'tentage' && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="absolute top-full left-1/2 -translate-x-1/2 w-[1100px] bg-white shadow-[0_25px_60px_rgba(0,0,0,0.15)] border border-gray-100 py-10 px-8 z-[110] rounded-b-xl"
+                className="absolute top-full left-1/2 -translate-x-1/2 w-[1100px] bg-[#1e293b] shadow-[0_25px_60px_rgba(0,0,0,0.4)] border border-white/10 py-10 px-8 z-[110] rounded-b-xl"
               >
                 <div className="grid grid-cols-6 gap-6">
                   {TENTAGE_DATA.map((item, index) => (
                     <Link key={index} href={item.href} className="group/item">
                       <div className="space-y-4">
-                        <h3 className="text-[13px] font-bold text-black group-hover/item:text-yellow-600 transition-colors leading-tight min-h-[32px]">
+                        <h3 className="text-[13px] font-bold text-white group-hover/item:text-[#B48E4B] transition-colors leading-tight min-h-[32px]">
                           {item.title}
                         </h3>
-                        <div className="relative aspect-square rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                          <Image 
-                            src={item.image} 
-                            alt={item.title} 
-                            fill 
+                        <div className="relative aspect-square rounded-lg overflow-hidden border border-white/10 shadow-sm">
+                          <Image
+                            src={item.image}
+                            alt={item.title}
+                            fill
                             className="object-cover transition-transform duration-500 group-hover/item:scale-110"
                           />
                         </div>
@@ -240,36 +240,35 @@ export default function Navbar() {
         </div>
 
         {/* Equipment Rental Mega Menu */}
-        <div 
+        <div
           className="relative h-full flex items-center group"
           onMouseEnter={() => setActiveMenu('equipment')}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <Link href="/equipment-rental" className="font-bold text-black tracking-tight">
+          <Link href="/equipment-rental" className="font-bold text-white tracking-tight">
             Equipment Rental
           </Link>
           <AnimatePresence>
             {activeMenu === 'equipment' && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="absolute top-full left-1/2 -translate-x-1/2 w-[1000px] bg-white shadow-[0_30px_70px_rgba(0,0,0,0.18)] border border-gray-100 py-12 px-12 z-[110] rounded-b-2xl"
+                className="absolute top-full left-1/2 -translate-x-1/2 w-[1000px] bg-[#1e293b] shadow-[0_30px_70px_rgba(0,0,0,0.5)] border border-white/10 py-12 px-12 z-[110] rounded-b-2xl"
               >
                 <div className="grid grid-cols-3 gap-12">
                   {EQUIPMENT_CATEGORIES.map((category, idx) => (
                     <div key={idx} className="space-y-6">
-                      <h3 className="text-lg font-bold text-black border-b border-gray-100 pb-3">
+                      <h3 className="text-lg font-bold text-white border-b border-white/10 pb-3">
                         {category.title}
                       </h3>
                       <ul className="space-y-2.5">
                         {category.items.map((item, i) => (
                           <li key={i} className="group/item flex items-start gap-2 cursor-pointer">
-                            {!item.startsWith('•') && <span className="text-gray-400 text-[10px] mt-1.5 group-hover/item:text-yellow-600 transition-colors">▸</span>}
-                            <span className={`text-[13px] font-medium leading-tight transition-colors group-hover/item:text-yellow-600 ${
-                              item.startsWith('•') ? 'text-gray-500 pl-4' : 'text-gray-700'
-                            }`}>
+                            {!item.startsWith('•') && <span className="text-gray-500 text-[10px] mt-1.5 group-hover/item:text-[#B48E4B] transition-colors">▸</span>}
+                            <span className={`text-[13px] font-medium leading-tight transition-colors group-hover/item:text-[#B48E4B] ${item.startsWith('•') ? 'text-gray-500 pl-4' : 'text-gray-300'
+                              }`}>
                               {item}
                             </span>
                           </li>
@@ -283,13 +282,13 @@ export default function Navbar() {
           </AnimatePresence>
         </div>
 
-        <Link href="/system-exhibition-panel" className="font-semibold text-gray-400 hover:text-black transition-colors tracking-tight">System/Exhibition Panel</Link>
-        <Link href="/contact" className="font-semibold text-gray-400 hover:text-black transition-colors tracking-tight">Contact Us</Link>
+        <Link href="/system-exhibition-panel" className="font-semibold text-gray-400 hover:text-white transition-colors tracking-tight">System/Exhibition Panel</Link>
+        <Link href="/contact" className="font-semibold text-gray-400 hover:text-white transition-colors tracking-tight">Contact Us</Link>
       </div>
 
       {/* Search Icon */}
       <div className="flex items-center ml-4">
-        <button className="p-2 text-gray-500 hover:text-black transition-colors focus:outline-none cursor-pointer">
+        <button className="p-2 text-gray-400 hover:text-white transition-colors focus:outline-none cursor-pointer">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>

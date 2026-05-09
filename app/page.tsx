@@ -1,7 +1,7 @@
 import HeroSection from '@/components/home/HeroSection';
 import ServicesGrid from '@/components/home/ServicesGrid';
 import EventChronicles from '@/components/home/EventChronicles';
-import Testimonials from '@/components/home/Testimonials';
+import TrustSection from '@/components/home/TrustSection';
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <HeroSection />
       <ServicesGrid />
       <EventChronicles />
-      <Testimonials />
+      <TrustSection />
     </div>
   );
 }

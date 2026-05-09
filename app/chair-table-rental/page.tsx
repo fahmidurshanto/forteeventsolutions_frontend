@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function ChairTableRentalPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-[#0F172A]">
       <RentalHero title="Chairs and Table Rental" />
       
       <CTASection />
