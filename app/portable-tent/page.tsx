@@ -90,6 +90,7 @@ export default function PortableTentPage() {
           src="/hero_tent_1778119496158.png"
           alt="Portable Tent Hero"
           fill
+          sizes="100vw"
           className="object-cover brightness-[0.3]"
           priority
         />
@@ -122,7 +123,7 @@ export default function PortableTentPage() {
               whileHover={{ y: -15, scale: 1.02 }}
               className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-white/10"
             >
-              <Image src={tent.image} alt={tent.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <Image src={tent.image} alt={tent.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
                 <h3 className="text-white font-black italic text-xl leading-tight uppercase tracking-tighter">{tent.title}</h3>
@@ -200,6 +201,7 @@ export default function PortableTentPage() {
                   src={section.images[activeThumbnails[section.id] || 0]}
                   alt={section.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </motion.div>
@@ -211,7 +213,7 @@ export default function PortableTentPage() {
                     className={`relative w-28 aspect-[4/3] rounded-xl overflow-hidden border-4 transition-all duration-300 ${activeThumbnails[section.id] === i ? 'border-[#B48E4B] scale-110 shadow-lg' : 'border-transparent opacity-40 hover:opacity-100 hover:scale-105'
                       }`}
                   >
-                    <Image src={img} alt="thumbnail" fill className="object-cover" />
+                    <Image src={img} alt="thumbnail" fill sizes="112px" className="object-cover" />
                   </button>
                 ))}
               </div>
@@ -240,7 +242,7 @@ export default function PortableTentPage() {
           </button>
         </div>
         <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl group border-8 border-white/5">
-          <Image src="/chronicle_1_1778119918431.png" alt="Event setup" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+          <Image src="/chronicle_1_1778119918431.png" alt="Event setup" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
           <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors" />
         </div>
       </section>

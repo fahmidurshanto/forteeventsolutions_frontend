@@ -33,16 +33,16 @@ export default function ChairTableRentalPage() {
           "Ribbon (for PVC and Cushion Chairs)"
         ]}
         images={[
-          "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1505843513577-22bb7d21ef45?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1517456793572-1d8efd6ad13e?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1519741621693-8859ad06ca6b?q=80&w=800&auto=format&fit=crop",
+          "/chair_1.jpg",
+          "/chair_2.jpg",
+          "/chair_3.jpg",
+          "/chair_4.jpg",
+          "/chair_5.jpg",
+          "/chair_6.png",
+          "/chair_1.jpg",
+          "/chair_2.jpg"
         ]}
-        videoEmbedCode="chair-overview"
+        videoSrc="/wedding-hall.mp4"
       />
 
       <RentalProductSection 
@@ -66,16 +66,16 @@ export default function ChairTableRentalPage() {
           "Centrepiece"
         ]}
         images={[
-          "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1470753937643-efdd931202a4?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1461344577544-4e5dc9487184?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=800&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1505373633560-fa90143a8018?q=80&w=800&auto=format&fit=crop",
+          "/table_1.jpg",
+          "/table_2.jpg",
+          "/table_1.jpg",
+          "/table_4.jpg",
+          "/table_1.jpg",
+          "/table_2.jpg",
+          "/table_1.jpg",
+          "/table_4.jpg"
         ]}
-        videoEmbedCode="table-overview"
+        videoSrc="/wedding-reception-in-rural.mp4"
         reverse={true}
       />
     </main>

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const CATEGORIES = [
-  "CHAIRS", "TABLES", "FANS", "LIGHTS", "AIR-CON", 
+  "CHAIRS", "TABLES", "FANS", "LIGHTS", "AIR-CON",
   "GENERATORS", "STAGE", "FLOORING AND CARPET", "BARRICADES", "SANITARY"
 ];
 
@@ -22,26 +22,62 @@ const EQUIPMENT_DATA: Record<string, any> = {
       "Plastic Foldable Chairs (white/black)"
     ],
     accessories: ["Chair Covers", "Cloth Ribbon"],
-    images: [
-      "/chronicle_1_1778119918431.png",
-      "/clear_span_tent_1778119637488.png",
-      "/marquee_tent_1778119583238.png",
-      "/staging_tent_1778119743118.png",
-      "/multi_zone_tent_1778119810462.png",
-      "/hero_tent_1778119496158.png",
-      "/chronicle_1_1778119918431.png",
-      "/clear_span_tent_1778119637488.png",
-      "/marquee_tent_1778119583238.png",
-      "/staging_tent_1778119743118.png"
-    ]
+    images: ["/chair_1.jpg", "/chair_2.jpg", "/chair_3.jpg", "/chair_4.jpg", "/chair_5.jpg", "/chair_6.png"]
   },
   "TABLES": {
     title: "Types of Tables",
     items: ["Round Tables", "Rectangular Tables", "IBM Tables", "Cocktail Tables"],
     accessories: ["Table Cloths", "Skirting"],
-    images: ["/marquee_tent_1778119583238.png"]
+    images: ["/table_1.jpg", "/table_2.jpg", "/table_4.jpg", "/table_1.jpg", "/table_2.jpg", "/table_4.jpg"]
   },
-  // Add more as needed...
+  "FANS": {
+    title: "Cooling & Fans",
+    items: ["Industrial Standing Fans", "Misting Fans", "Wall-mounted Fans"],
+    accessories: ["Extension Cords", "Safety Covers"],
+    images: ["/fan_1.jpg", "/fan_1.jpg", "/fan_1.jpg"]
+  },
+  "LIGHTS": {
+    title: "Lighting Solutions",
+    items: ["Fairy Lights", "Spotlights", "Flood Lights", "LED Wash Lights"],
+    accessories: ["Trusses", "Stands", "Dimmer Packs"],
+    images: ["/lights_1.jpg", "/lights_1.jpg", "/lights_1.jpg"]
+  },
+  "AIR-CON": {
+    title: "Air-Conditioning Systems",
+    items: ["Portable Air-Cons", "Standing Air-Cons", "Tentage Air-Con Units"],
+    accessories: ["Exhaust Pipes", "Power Generators"],
+    images: ["/aircon_1.jpg", "/aircon_1.jpg", "/aircon_1.jpg"]
+  },
+  "GENERATORS": {
+    title: "Power Generators",
+    items: ["Silent Generators (10kVA - 100kVA)", "Portable Petrol Generators"],
+    accessories: ["Distribution Boards", "Heavy Duty Cables"],
+    images: ["/generator_1.jpg", "/generator_1.jpg", "/generator_1.jpg"]
+  },
+  "STAGE": {
+    title: "Staging Solutions",
+    items: ["Modular Stage Platforms", "Custom Wooden Stages", "Runways", "Tiered Seating"],
+    accessories: ["Stage Skirting", "Stairs", "Handrails", "Carpet Overlay"],
+    images: ["/staging_tent_1778119743118.png", "/staging_tent_1778119743118.png"]
+  },
+  "FLOORING AND CARPET": {
+    title: "Flooring & Carpets",
+    items: ["Exhibition Carpets (Various Colors)", "Wooden Flooring", "Dance Floors", "Artificial Grass / Turf"],
+    accessories: ["Edge Trims", "Underlay"],
+    images: ["/flooring_1.jpg", "/flooring_1.jpg", "/flooring_1.jpg"]
+  },
+  "BARRICADES": {
+    title: "Crowd Control Barricades",
+    items: ["Metal Q-Poles", "Queue Stands with Retractable Belts", "Mojo Barricades", "VIP Ropes"],
+    accessories: ["Custom Printed Belts", "Signage Holders"],
+    images: ["/barricade_1.jpg", "/barricade_1.jpg", "/barricade_1.jpg"]
+  },
+  "SANITARY": {
+    title: "Sanitary Solutions",
+    items: ["Portable Toilets", "Executive Restroom Trailers", "Hand Wash Stations"],
+    accessories: ["Janitorial Services", "Premium Toiletries"],
+    images: ["/sanitary_1.jpg", "/sanitary_1.jpg", "/sanitary_1.jpg"]
+  }
 };
 
 export default function EquipmentRentalPage() {
@@ -52,16 +88,16 @@ export default function EquipmentRentalPage() {
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
-      
+
       {/* Header Section */}
       <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto text-center space-y-10">
         <h1 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter text-[#E8D08D] leading-tight">Equipment Rental</h1>
         <div className="max-w-4xl mx-auto">
           <p className="text-gray-400 font-bold italic leading-relaxed text-lg opacity-80">
-            Our Equipment Rental can be done in conjunction with your tentage or as a standalone. 
-            We have a large range of equipment ready for rental in 1-week notice. If you have any last 
-            minute request, you may also contact us directly at our hotline 98253390. Do use the tabs 
-            below to search for the type of equipment you need. If the item is not in the list below, 
+            Our Equipment Rental can be done in conjunction with your tentage or as a standalone.
+            We have a large range of equipment ready for rental in 1-week notice. If you have any last
+            minute request, you may also contact us directly at our hotline 98253390. Do use the tabs
+            below to search for the type of equipment you need. If the item is not in the list below,
             you may also check with us for ready stocks.
           </p>
         </div>
@@ -78,13 +114,12 @@ export default function EquipmentRentalPage() {
                   setActiveTab(cat);
                   setActiveImgIndex(0);
                 }}
-                className={`text-[11px] font-black tracking-[0.3em] transition-all relative px-2 ${
-                  activeTab === cat ? "text-[#B48E4B]" : "text-gray-500 hover:text-white"
-                }`}
+                className={`text-[11px] font-black tracking-[0.3em] transition-all relative px-2 ${activeTab === cat ? "text-[#B48E4B]" : "text-gray-500 hover:text-white"
+                  }`}
               >
                 {cat}
                 {activeTab === cat && (
-                  <motion.div 
+                  <motion.div
                     layoutId="activeTab"
                     className="absolute -bottom-3 left-0 right-0 h-1 bg-[#B48E4B] rounded-full shadow-lg shadow-[#B48E4B]/20"
                   />
@@ -98,7 +133,7 @@ export default function EquipmentRentalPage() {
       {/* Main Content */}
       <section className="py-32 px-4 md:px-8 max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -106,14 +141,15 @@ export default function EquipmentRentalPage() {
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start"
           >
-            
+
             {/* Gallery */}
             <div className="space-y-8">
               <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.6)] border-8 border-white/5 bg-white/5">
-                <Image 
-                  src={currentData.images[activeImgIndex] || currentData.images[0]} 
-                  alt={activeTab} 
-                  fill 
+                <Image
+                  src={currentData.images[activeImgIndex] || currentData.images[0]}
+                  alt={activeTab}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -122,11 +158,10 @@ export default function EquipmentRentalPage() {
                   <button
                     key={i}
                     onClick={() => setActiveImgIndex(i)}
-                    className={`relative aspect-square rounded-2xl overflow-hidden border-2 transition-all duration-500 ${
-                      activeImgIndex === i ? "border-[#B48E4B] scale-105 shadow-xl shadow-[#B48E4B]/10" : "border-white/5 opacity-30 hover:opacity-100"
-                    }`}
+                    className={`relative aspect-square rounded-2xl overflow-hidden border-2 transition-all duration-500 ${activeImgIndex === i ? "border-[#B48E4B] scale-105 shadow-xl shadow-[#B48E4B]/10" : "border-white/5 opacity-30 hover:opacity-100"
+                      }`}
                   >
-                    <Image src={img} alt="thumb" fill className="object-cover" />
+                    <Image src={img} alt="thumb" fill sizes="20vw" className="object-cover" />
                   </button>
                 ))}
               </div>

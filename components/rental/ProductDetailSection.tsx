@@ -57,6 +57,7 @@ export default function ProductDetailSection({
                   src={mainImage} 
                   alt={`${title} diagram`} 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
@@ -70,6 +71,7 @@ export default function ProductDetailSection({
                       src={src} 
                       alt={`${title} view ${index + 1}`} 
                       fill 
+                      sizes="(max-width: 768px) 50vw, 16vw"
                       className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors" />

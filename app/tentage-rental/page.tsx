@@ -75,6 +75,7 @@ export default function TentageRentalPage() {
               src={HERO_SLIDES[currentSlide].image}
               alt="Hero"
               fill
+              sizes="100vw"
               className="object-cover brightness-[0.25]"
               priority
             />
@@ -165,7 +166,7 @@ export default function TentageRentalPage() {
               className="space-y-8 group cursor-pointer"
             >
               <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-4 border-white/5">
-                <Image src={item.image} alt={item.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <Image src={item.image} alt={item.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
               <div className="space-y-4">
@@ -189,7 +190,7 @@ export default function TentageRentalPage() {
               className="space-y-8 group cursor-pointer"
             >
               <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-4 border-white/5">
-                <Image src={item.image} alt={item.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <Image src={item.image} alt={item.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
               <div className="space-y-4">

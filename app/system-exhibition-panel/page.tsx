@@ -26,7 +26,13 @@ const PRODUCT_SECTIONS = [
     title: "Modular Wall Panels",
     desc: "Standard 2.5m height panels perfect for exhibition partitions and backdrops.",
     specs: ["Standard Size: 1m(W) x 2.5m(H)", "Finish: White PVC / Aluminum Frame", "Modular connectivity for long runs", "Stable and self-supporting"],
-    mainImage: "/clear_span_tent_1778119637488.png",
+    images: [
+      "/clear_span_tent_1778119637488.png",
+      "/wall_panel_1.jpg",
+      "/wall_panel_2.jpg",
+      "/wall_panel_5.jpg"
+    ],
+    video: "/tent-video-from-wedding.mp4",
     thumbnails: 10
   },
   {
@@ -34,7 +40,12 @@ const PRODUCT_SECTIONS = [
     title: "Exhibition Booth Setup",
     desc: "Complete booth solutions including fascia boards and lighting.",
     specs: ["Custom sizes (3x3m, 6x3m, etc.)", "Includes overhead fascia board", "Optional carpeting and furniture", "Professional lighting included"],
-    mainImage: "/marquee_tent_1778119583238.png",
+    images: [
+      "/marquee_tent_1778119583238.png",
+      "/multi_zone_tent_1778119810462.png",
+      "/hero_tent_1778119496158.png"
+    ],
+    video: "/wedding-reception-in-rural.mp4",
     thumbnails: 12
   },
   {
@@ -42,7 +53,12 @@ const PRODUCT_SECTIONS = [
     title: "Information Counters",
     desc: "Sleek counters for registration and product display.",
     specs: ["Standard size: 1m(L) x 0.5m(W) x 1m(H)", "Lockable storage cabinet", "Clean white finish", "Portable and easy to reposition"],
-    mainImage: "/staging_tent_1778119743118.png",
+    images: [
+      "/staging_tent_1778119743118.png",
+      "/counter_2.jpg",
+      "/clear_span_tent_1778119637488.png"
+    ],
+    video: "/wedding-hall.mp4",
     thumbnails: 8
   }
 ];
@@ -57,6 +73,7 @@ export default function SystemExhibitionPage() {
           src="/hero_tent_1778119496158.png" 
           alt="System Panel Hero" 
           fill 
+          sizes="100vw"
           className="object-cover brightness-[0.25]"
         />
         <div className="relative z-10 text-center text-white px-4">
@@ -87,7 +104,7 @@ export default function SystemExhibitionPage() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {SELECTION_GALLERY.map((img, i) => (
             <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500 cursor-pointer border border-white/10">
-              <Image src={img} alt="Gallery" fill className="object-cover" />
+              <Image src={img} alt="Gallery" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
               <div className="absolute inset-0 bg-black/20 hover:bg-transparent transition-colors duration-500" />
             </div>
           ))}
@@ -142,22 +159,27 @@ export default function SystemExhibitionPage() {
               {/* Visuals */}
               <div className="space-y-6">
                 <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.5)] border-8 border-white/5">
-                  <Image src={section.mainImage} alt={section.title} fill className="object-cover" />
+                  <Image src={section.images[0]} alt={section.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                 </div>
                 <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-black flex items-center justify-center group cursor-pointer border-4 border-white/5 shadow-2xl">
-                  <Image src={section.mainImage} alt="Video Preview" fill className="object-cover opacity-40 group-hover:opacity-60 transition-opacity" />
-                  <div className="relative z-10 w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl group-hover:scale-110 transition-transform">
-                    ▶
-                  </div>
+                  <video 
+                    src={section.video} 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    controls 
+                    className="w-full h-full object-cover" 
+                  />
                 </div>
               </div>
             </div>
 
             {/* Thumbnail Grid */}
-            <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-10 gap-3 opacity-30">
+            <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-10 gap-3 mt-8">
               {Array.from({ length: section.thumbnails }).map((_, i) => (
-                <div key={i} className="relative aspect-square rounded-lg bg-white/5 overflow-hidden border border-white/10">
-                   <Image src={section.mainImage} alt="thumb" fill className="object-cover scale-150 grayscale" />
+                <div key={i} className="relative aspect-square rounded-lg bg-white/5 overflow-hidden border border-white/10 group cursor-pointer shadow-lg hover:border-[#B48E4B]/50 transition-colors">
+                   <Image src={section.images[i % section.images.length]} alt="thumb" fill sizes="10vw" className="object-cover transition-all duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0" />
                 </div>
               ))}
             </div>
@@ -169,12 +191,18 @@ export default function SystemExhibitionPage() {
       <section className="py-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-center text-3xl font-black uppercase italic tracking-tighter mb-16 border-b-4 border-[#B48E4B] inline-block mx-auto text-white">Explore More Products</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-          {["Tentage", "Chairs", "Tables", "Fans", "Flooring"].map((p) => (
-            <div key={p} className="space-y-4 group cursor-pointer">
+          {[
+            { title: "Tentage", img: "/hero_tent_1778119496158.png" },
+            { title: "Chairs", img: "/chair_1.jpg" },
+            { title: "Tables", img: "/table_1.jpg" },
+            { title: "Fans", img: "/fan_1.jpg" },
+            { title: "Flooring", img: "/flooring_1.jpg" }
+          ].map((p) => (
+            <div key={p.title} className="space-y-4 group cursor-pointer">
               <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-white/5 shadow-2xl">
-                <Image src="/hero_tent_1778119496158.png" alt={p} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                <Image src={p.img} alt={p.title} fill sizes="(max-width: 768px) 50vw, 20vw" className="object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
-              <h4 className="text-center font-black uppercase italic text-sm tracking-widest text-gray-400 group-hover:text-[#B48E4B] transition-colors">{p}</h4>
+              <h4 className="text-center font-black uppercase italic text-sm tracking-widest text-gray-400 group-hover:text-[#B48E4B] transition-colors">{p.title}</h4>
             </div>
           ))}
         </div>

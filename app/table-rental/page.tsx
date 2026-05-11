@@ -44,12 +44,12 @@ export default function TableRentalPage() {
         title="Round Tables"
         description="Classic round tables available in various sizes (3ft to 5ft). Perfect for wedding banquets, gala dinners, and social gatherings."
         details={['VARIOUS SIZES', 'PREMIUM TABLECLOTH OPTIONS', 'STURDY FOLDABLE LEGS']}
-        mainImage="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop"
+        mainImage="/table_1.jpg"
         imageGrid={[
-          "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1470753937643-efdd931202a4?q=80&w=400&auto=format&fit=crop"
+          "/table_2.jpg",
+          "/table_1.jpg",
+          "/table_4.jpg",
+          "/table_2.jpg"
         ]}
       />
 
@@ -57,12 +57,12 @@ export default function TableRentalPage() {
         title="Rectangle Tables"
         description="Versatile rectangle tables for exhibition booths, registration counters, and buffet lines. Available in multiple lengths."
         details={['GS TABLES (2ft x 6ft)', 'CUSTOM SKIRTING AVAILABLE', 'HEAVY DUTY']}
-        mainImage="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=800&auto=format&fit=crop"
+        mainImage="/table_2.jpg"
         imageGrid={[
-          "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1461344577544-4e5dc9487184?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=400&auto=format&fit=crop"
+          "/table_1.jpg",
+          "/table_4.jpg",
+          "/table_2.jpg",
+          "/table_1.jpg"
         ]}
         reverse={true}
       />
@@ -71,12 +71,12 @@ export default function TableRentalPage() {
         title="Cocktail / High Tables"
         description="Elegant high tables for networking sessions and cocktail parties. Pair them with our bar stools for a complete look."
         details={['2ft ALUMINUM TOP', 'STYLISH SPANDEX COVERS', 'MODERN LOOK']}
-        mainImage="https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=800&auto=format&fit=crop"
+        mainImage="/table_4.jpg"
         imageGrid={[
-          "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1470753937643-efdd931202a4?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1461344577544-4e5dc9487184?q=80&w=400&auto=format&fit=crop"
+          "/table_2.jpg",
+          "/table_1.jpg",
+          "/table_4.jpg",
+          "/table_1.jpg"
         ]}
       />
 
@@ -84,12 +84,12 @@ export default function TableRentalPage() {
         title="Picnic Tables"
         description="Sturdy wooden picnic tables with attached benches. Ideal for outdoor carnivals, rustic themes, and communal dining."
         details={['SOLID WOOD FINISH', 'INTEGRATED BENCHES', 'COMMUNAL SEATING']}
-        mainImage="https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=800&auto=format&fit=crop"
+        mainImage="/table_1.jpg"
         imageGrid={[
-          "https://images.unsplash.com/photo-1505373633560-fa90143a8018?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=400&auto=format&fit=crop"
+          "/table_4.jpg",
+          "/table_2.jpg",
+          "/table_1.jpg",
+          "/table_4.jpg"
         ]}
         reverse={true}
       />

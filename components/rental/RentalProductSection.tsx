@@ -10,7 +10,7 @@ interface RentalProductSectionProps {
   accessoriesTitle?: string;
   accessories?: string[];
   images: string[];
-  videoEmbedCode?: string; // YouTube embed code
+  videoSrc?: string; // Local video path
   reverse?: boolean; // Swap columns
 }
 
@@ -22,7 +22,7 @@ export default function RentalProductSection({
   accessoriesTitle,
   accessories,
   images,
-  videoEmbedCode,
+  videoSrc,
   reverse = false,
 }: RentalProductSectionProps) {
   return (
@@ -43,6 +43,7 @@ export default function RentalProductSection({
                     src={src}
                     alt={`${title} image ${index + 1}`}
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
@@ -50,22 +51,17 @@ export default function RentalProductSection({
               ))}
             </div>
             
-            {videoEmbedCode && (
-              <div className="aspect-video w-full rounded-3xl overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.5)] border-8 border-white/5 bg-[#131B2E] flex items-center justify-center group cursor-pointer relative">
-                <Image
-                  src={images[0]}
-                  alt="Video background"
-                  fill
-                  className="object-cover opacity-40 group-hover:opacity-50 transition-opacity"
+            {videoSrc && (
+              <div className="aspect-video w-full rounded-3xl overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.5)] border-8 border-white/5 bg-[#131B2E] flex items-center justify-center relative">
+                <video 
+                  src={videoSrc} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline 
+                  controls 
+                  className="w-full h-full object-cover" 
                 />
-                <div className="relative z-10 text-center p-8">
-                  <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm font-black text-white uppercase tracking-[0.3em]">{title} Overview</p>
-                </div>
               </div>
             )}
           </div>

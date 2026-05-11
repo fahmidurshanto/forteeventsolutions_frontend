@@ -86,7 +86,7 @@ export default function Navbar() {
       <div className="flex-shrink-0 h-full">
         <Link href="/" className="block h-full py-1">
           <Image
-            src="/forteeventsolutions_logo.jpeg"
+            src="/forteeventsolutions_logo.png"
             alt="Forte Event Solutions Logo"
             width={300}
             height={100}

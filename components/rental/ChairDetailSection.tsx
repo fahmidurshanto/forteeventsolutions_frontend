@@ -54,6 +54,7 @@ export default function ChairDetailSection({
                 src={mainImage} 
                 alt={`${title} diagram`} 
                 fill 
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-contain p-4"
               />
             </div>
@@ -66,6 +67,7 @@ export default function ChairDetailSection({
                     src={src} 
                     alt={`${title} view ${index + 1}`} 
                     fill 
+                    sizes="(max-width: 768px) 50vw, 16vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
