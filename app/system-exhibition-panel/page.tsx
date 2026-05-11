@@ -121,12 +121,37 @@ export default function SystemExhibitionPage() {
         </p>
       </section>
 
-      {/* Partners / Logos */}
-      <section className="py-20 border-y border-white/5 bg-[#131B2E]">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-12 opacity-30 grayscale hover:opacity-100 transition-opacity duration-700">
-          {["Logo1", "Logo2", "Logo3", "Logo4", "Logo5"].map((l) => (
-            <div key={l} className="font-black text-2xl uppercase tracking-widest italic text-white">{l}</div>
-          ))}
+      {/* Recent Tentage Events Gallery */}
+      <section className="py-24 bg-[#131B2E] border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="text-3xl font-black uppercase italic tracking-tighter text-[#E8D08D]">Recent Tentage Events</h2>
+            <div className="w-24 h-1 bg-[#B48E4B] rounded-full" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {[
+              "/hero_tent_1778119496158.png",
+              "/clear_span_tent_1778119637488.png",
+              "/marquee_tent_1778119583238.png",
+              "/staging_tent_1778119743118.png",
+              "/multi_zone_tent_1778119810462.png"
+            ].map((img, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -10, scale: 1.05 }}
+                className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group"
+              >
+                <Image
+                  src={img}
+                  alt={`Tentage Event ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 20vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

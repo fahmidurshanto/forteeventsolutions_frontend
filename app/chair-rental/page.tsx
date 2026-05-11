@@ -36,7 +36,7 @@ export default function ChairRentalPage() {
         mainImage="/chair_6.png"
         imageGrid={[
           "/chair_1.jpg",
-          "/chair_2.jpg",
+          "/image.jpg",
           "/chair_3.jpg",
           "/chair_4.jpg"
         ]}
@@ -50,7 +50,7 @@ export default function ChairRentalPage() {
         imageGrid={[
           "/chair_4.jpg",
           "/chair_3.jpg",
-          "/chair_2.jpg",
+          "/image.jpg",
           "/chair_1.jpg"
         ]}
         reverse={true}
@@ -65,7 +65,7 @@ export default function ChairRentalPage() {
           "/chair_1.jpg",
           "/chair_5.jpg",
           "/chair_4.jpg",
-          "/chair_2.jpg"
+          "/image.jpg"
         ]}
       />
 

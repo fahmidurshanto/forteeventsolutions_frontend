@@ -22,7 +22,7 @@ const EQUIPMENT_DATA: Record<string, any> = {
       "Plastic Foldable Chairs (white/black)"
     ],
     accessories: ["Chair Covers", "Cloth Ribbon"],
-    images: ["/chair_1.jpg", "/chair_2.jpg", "/chair_3.jpg", "/chair_4.jpg", "/chair_5.jpg", "/chair_6.png"]
+    images: ["/chair_1.jpg", "/image.jpg", "/chair_3.jpg", "/chair_4.jpg", "/chair_5.jpg", "/chair_6.png"]
   },
   "TABLES": {
     title: "Types of Tables",

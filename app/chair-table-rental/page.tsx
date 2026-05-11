@@ -33,14 +33,14 @@ export default function ChairTableRentalPage() {
           "Ribbon (for PVC and Cushion Chairs)"
         ]}
         images={[
-          "/chair_1.jpg",
-          "/chair_2.jpg",
-          "/chair_3.jpg",
-          "/chair_4.jpg",
-          "/chair_5.jpg",
-          "/chair_6.png",
-          "/chair_1.jpg",
-          "/chair_2.jpg"
+          "/image.png",
+          "/image.jpg",
+          "/image_8.jpg",
+          "/image_7.jpg",
+          "/image_6.jpg",
+          "/image_5.jpg",
+          "/image_4.png",
+          "/image_3.png"
         ]}
         videoSrc="/wedding-hall.mp4"
       />
