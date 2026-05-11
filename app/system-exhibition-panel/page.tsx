@@ -16,7 +16,7 @@ const SELECTION_GALLERY = [
   "/marquee_tent_1778119583238.webp",
   "/clear_span_tent_1778119637488.webp",
   "/staging_tent_1778119743118.webp",
-  "/multi_zone_tent_1778119810462.webp",
+  "/singaporean_wedding_banquet.webp",
   "/hero_tent_1778119496158.webp"
 ];
 
@@ -42,7 +42,7 @@ const PRODUCT_SECTIONS = [
     specs: ["Custom sizes (3x3m, 6x3m, etc.)", "Includes overhead fascia board", "Optional carpeting and furniture", "Professional lighting included"],
     images: [
       "/marquee_tent_1778119583238.webp",
-      "/multi_zone_tent_1778119810462.webp",
+      "/singaporean_wedding_banquet.webp",
       "/hero_tent_1778119496158.webp"
     ],
     video: "/wedding-reception-in-rural.mp4",
@@ -134,7 +134,7 @@ export default function SystemExhibitionPage() {
               "/clear_span_tent_1778119637488.webp",
               "/marquee_tent_1778119583238.webp",
               "/staging_tent_1778119743118.webp",
-              "/multi_zone_tent_1778119810462.webp"
+              "/singaporean_wedding_banquet.webp"
             ].map((img, i) => (
               <motion.div
                 key={i}

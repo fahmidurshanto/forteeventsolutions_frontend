@@ -24,7 +24,7 @@ const TENT_TYPES = [
   {
     id: "custom",
     title: "Purchase custom tent with/without print",
-    image: "/multi_zone_tent_1778119810462.webp",
+    image: "/singaporean_wedding_banquet.webp",
   }
 ];
 
@@ -70,7 +70,7 @@ const PRODUCT_SECTIONS = [
       "fits 3 x 4ft / 6ft rectangular table with 18-24pax",
     ],
     price: "From $320.00",
-    images: ["/staging_tent_1778119743118.webp", "/multi_zone_tent_1778119810462.webp"]
+    images: ["/staging_tent_1778119743118.webp", "/singaporean_wedding_banquet.webp"]
   }
 ];
 

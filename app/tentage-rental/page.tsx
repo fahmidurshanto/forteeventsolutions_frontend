@@ -35,7 +35,7 @@ const TENTAGE_ITEMS = [
   { title: "Portable Tent", desc: "Fast and reliable shelter for small events and functions.", image: "/clear_span_tent_1778119637488.webp" },
   { title: "Single Sloping Tentage", desc: "Ideal for walkways and narrow spaces with modern design.", image: "/marquee_tent_1778119583238.webp" },
   { title: "A-Shaped Tentage", desc: "Classic robust structure for large gatherings and exhibitions.", image: "/staging_tent_1778119743118.webp" },
-  { title: "Gazebo Tentage", desc: "Elegant and stylish tents for garden parties and high-end events.", image: "/multi_zone_tent_1778119810462.webp" },
+  { title: "Gazebo Tentage", desc: "Elegant and stylish tents for garden parties and high-end events.", image: "/singaporean_wedding_banquet.webp" },
   { title: "Aircon Tentage", desc: "Fully enclosed climate-controlled structures for maximum comfort.", image: "/hero_tent_1778119496158.webp" },
   { title: "Classic Tentage", desc: "Traditional reliable tentage for community and outdoor events.", image: "/clear_span_tent_1778119637488.webp" }
 ];

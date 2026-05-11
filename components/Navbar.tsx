@@ -22,7 +22,7 @@ const TENT_DATA = [
     title: "3m x 6m tent",
     caption: "fits 2 x 4ft round table with 8-10pax",
     openImage: "/staging_tent_1778119743118.webp",
-    walledImage: "/multi_zone_tent_1778119810462.webp",
+    walledImage: "/singaporean_wedding_banquet.webp",
   },
 ];
 
@@ -32,7 +32,7 @@ const TENTAGE_DATA = [
   { title: "A-Shaped Tentage", image: "/staging_tent_1778119743118.webp", href: "/tentage-rental#a-shaped" },
   { title: "Aircon Tentage", image: "/hero_tent_1778119496158.webp", href: "/tentage-rental#aircon" },
   { title: "Classic Tentage", image: "/clear_span_tent_1778119637488.webp", href: "/tentage-rental#classic" },
-  { title: "Gazebo Tentage", image: "/multi_zone_tent_1778119810462.webp", href: "/tentage-rental#gazebo" },
+  { title: "Gazebo Tentage", image: "/singaporean_wedding_banquet.webp", href: "/tentage-rental#gazebo" },
 ];
 
 const EQUIPMENT_CATEGORIES = [
