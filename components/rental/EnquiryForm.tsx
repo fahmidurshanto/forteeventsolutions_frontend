@@ -56,7 +56,7 @@ export default function EnquiryForm() {
           <div className="md:col-span-2 text-center mt-10">
             <button 
               type="submit"
-              className="bg-[#B48E4B] hover:brightness-110 text-[#0F172A] px-16 py-6 rounded-2xl font-black tracking-[0.3em] transition-all shadow-2xl shadow-[#B48E4B]/20 active:scale-95 uppercase"
+              className="px-16 py-6 btn-golden"
             >
               Send Message
             </button>

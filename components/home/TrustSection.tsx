@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 
 const USPs = [
+ 
   {
-    title: "14+ Years Excellence",
-    desc: "Proven track record in managing large-scale corporate and community events since 2010.",
-    icon: "🏆"
-  },
+  title: "Creative Event Solutions",
+  desc: "Transforming ideas into immersive and memorable event experiences.",
+  icon: "🏆"
+},
   {
     title: "Rapid Site Survey",
     desc: "Our team provides onsite consultations and quotations within 24 hours of your request.",
@@ -31,7 +32,7 @@ const PARTNERS = [
 
 export default function TrustSection() {
   return (
-    <section className="py-32 bg-[#0F172A] border-t border-white/5">
+    <section className="pt-32 bg-[#0F172A] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         
         {/* Value Propositions */}
@@ -76,19 +77,7 @@ export default function TrustSection() {
           ))}
         </div>
 
-        {/* Logo Marquee Section */}
-        <div className="border-t border-white/5 pt-24">
-          <div className="text-center mb-16">
-            <h3 className="text-gray-500 font-black uppercase tracking-widest text-[10px]">Trusted by Leading Corporations</h3>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-30 grayscale hover:opacity-100 transition-all duration-700">
-            {PARTNERS.map((partner) => (
-              <div key={partner} className="text-white font-black text-xl uppercase italic tracking-widest border border-white/20 px-6 py-2 rounded-lg">
-                {partner}
-              </div>
-            ))}
-          </div>
-        </div>
+     
 
       </div>
     </section>

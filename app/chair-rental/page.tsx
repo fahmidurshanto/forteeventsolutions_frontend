@@ -33,12 +33,12 @@ export default function ChairRentalPage() {
         title="PVC Plastic Chairs"
         description="Ideal for outdoor events, carnivals, and casual gatherings. Durable, lightweight, and stackable."
         details={['WHITE/RED COLOURS', 'STACKABLE DESIGN', 'OUTDOOR FRIENDLY']}
-        mainImage="/chair_6.png"
+        mainImage="/chair_6.webp"
         imageGrid={[
-          "/chair_1.jpg",
-          "/image.jpg",
-          "/chair_3.jpg",
-          "/chair_4.jpg"
+          "/chair_1.webp",
+          "/image.webp",
+          "/chair_3.webp",
+          "/chair_4.webp"
         ]}
       />
 
@@ -46,12 +46,12 @@ export default function ChairRentalPage() {
         title="Cushion Chairs"
         description="Premium red cushion chairs for conferences, seminars, and formal indoor events. Comfort meets professionalism."
         details={['RED FABRIC', 'STURDY METAL FRAME', 'CONFERENCE STYLE']}
-        mainImage="/chair_5.jpg"
+        mainImage="/chair_5.webp"
         imageGrid={[
-          "/chair_4.jpg",
-          "/chair_3.jpg",
-          "/image.jpg",
-          "/chair_1.jpg"
+          "/chair_4.webp",
+          "/chair_3.webp",
+          "/image.webp",
+          "/chair_1.webp"
         ]}
         reverse={true}
       />
@@ -60,12 +60,12 @@ export default function ChairRentalPage() {
         title="Tiffany Chairs"
         description="Elegant gold Tiffany chairs with white cushions. The perfect choice for weddings and luxury celebrations."
         details={['GOLD FINISH', 'WHITE LEATHER CUSHION', 'WEDDING SPECIAL']}
-        mainImage="/chair_3.jpg"
+        mainImage="/chair_3.webp"
         imageGrid={[
-          "/chair_1.jpg",
-          "/chair_5.jpg",
-          "/chair_4.jpg",
-          "/image.jpg"
+          "/chair_1.webp",
+          "/chair_5.webp",
+          "/chair_4.webp",
+          "/image.webp"
         ]}
       />
 

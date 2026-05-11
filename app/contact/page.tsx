@@ -64,7 +64,7 @@ export default function ContactPage() {
               </div>
 
               <div className="md:col-span-2 pt-6">
-                <button className="bg-[#B48E4B] text-[#0F172A] px-16 py-6 rounded-2xl font-black uppercase tracking-[0.3em] hover:brightness-110 transition-all shadow-2xl shadow-[#B48E4B]/20 active:scale-[0.98] text-xs">
+                <button className="px-16 py-6 btn-golden">
                   Send Inquiry
                 </button>
               </div>

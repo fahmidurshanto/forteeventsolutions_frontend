@@ -13,11 +13,11 @@ const BENEFITS = [
 ];
 
 const SELECTION_GALLERY = [
-  "/marquee_tent_1778119583238.png",
-  "/clear_span_tent_1778119637488.png",
-  "/staging_tent_1778119743118.png",
-  "/multi_zone_tent_1778119810462.png",
-  "/hero_tent_1778119496158.png"
+  "/marquee_tent_1778119583238.webp",
+  "/clear_span_tent_1778119637488.webp",
+  "/staging_tent_1778119743118.webp",
+  "/multi_zone_tent_1778119810462.webp",
+  "/hero_tent_1778119496158.webp"
 ];
 
 const PRODUCT_SECTIONS = [
@@ -27,10 +27,10 @@ const PRODUCT_SECTIONS = [
     desc: "Standard 2.5m height panels perfect for exhibition partitions and backdrops.",
     specs: ["Standard Size: 1m(W) x 2.5m(H)", "Finish: White PVC / Aluminum Frame", "Modular connectivity for long runs", "Stable and self-supporting"],
     images: [
-      "/clear_span_tent_1778119637488.png",
-      "/wall_panel_1.jpg",
-      "/wall_panel_2.jpg",
-      "/wall_panel_5.jpg"
+      "/clear_span_tent_1778119637488.webp",
+      "/wall_panel_1.webp",
+      "/wall_panel_2.webp",
+      "/wall_panel_5.webp"
     ],
     video: "/tent-video-from-wedding.mp4",
     thumbnails: 10
@@ -41,9 +41,9 @@ const PRODUCT_SECTIONS = [
     desc: "Complete booth solutions including fascia boards and lighting.",
     specs: ["Custom sizes (3x3m, 6x3m, etc.)", "Includes overhead fascia board", "Optional carpeting and furniture", "Professional lighting included"],
     images: [
-      "/marquee_tent_1778119583238.png",
-      "/multi_zone_tent_1778119810462.png",
-      "/hero_tent_1778119496158.png"
+      "/marquee_tent_1778119583238.webp",
+      "/multi_zone_tent_1778119810462.webp",
+      "/hero_tent_1778119496158.webp"
     ],
     video: "/wedding-reception-in-rural.mp4",
     thumbnails: 12
@@ -54,9 +54,9 @@ const PRODUCT_SECTIONS = [
     desc: "Sleek counters for registration and product display.",
     specs: ["Standard size: 1m(L) x 0.5m(W) x 1m(H)", "Lockable storage cabinet", "Clean white finish", "Portable and easy to reposition"],
     images: [
-      "/staging_tent_1778119743118.png",
-      "/counter_2.jpg",
-      "/clear_span_tent_1778119637488.png"
+      "/staging_tent_1778119743118.webp",
+      "/counter_2.webp",
+      "/clear_span_tent_1778119637488.webp"
     ],
     video: "/wedding-hall.mp4",
     thumbnails: 8
@@ -70,7 +70,7 @@ export default function SystemExhibitionPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image 
-          src="/hero_tent_1778119496158.png" 
+          src="/hero_tent_1778119496158.webp" 
           alt="System Panel Hero" 
           fill 
           sizes="100vw"
@@ -130,11 +130,11 @@ export default function SystemExhibitionPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              "/hero_tent_1778119496158.png",
-              "/clear_span_tent_1778119637488.png",
-              "/marquee_tent_1778119583238.png",
-              "/staging_tent_1778119743118.png",
-              "/multi_zone_tent_1778119810462.png"
+              "/hero_tent_1778119496158.webp",
+              "/clear_span_tent_1778119637488.webp",
+              "/marquee_tent_1778119583238.webp",
+              "/staging_tent_1778119743118.webp",
+              "/multi_zone_tent_1778119810462.webp"
             ].map((img, i) => (
               <motion.div
                 key={i}
@@ -176,7 +176,7 @@ export default function SystemExhibitionPage() {
                     </li>
                   ))}
                 </ul>
-                <button className="bg-[#B48E4B] text-[#0F172A] px-10 py-4 rounded-lg font-black uppercase tracking-widest hover:brightness-110 transition-all shadow-xl shadow-[#B48E4B]/10 active:scale-95">
+                <button className="px-10 py-4 btn-golden">
                   Call for Quote
                 </button>
               </div>
@@ -217,11 +217,11 @@ export default function SystemExhibitionPage() {
         <h2 className="text-center text-3xl font-black uppercase italic tracking-tighter mb-16 border-b-4 border-[#B48E4B] inline-block mx-auto text-white">Explore More Products</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {[
-            { title: "Tentage", img: "/hero_tent_1778119496158.png" },
-            { title: "Chairs", img: "/chair_1.jpg" },
-            { title: "Tables", img: "/table_1.jpg" },
-            { title: "Fans", img: "/fan_1.jpg" },
-            { title: "Flooring", img: "/flooring_1.jpg" }
+            { title: "Tentage", img: "/hero_tent_1778119496158.webp" },
+            { title: "Chairs", img: "/chair_1.webp" },
+            { title: "Tables", img: "/table_1.webp" },
+            { title: "Fans", img: "/fan_1.webp" },
+            { title: "Flooring", img: "/flooring_1.webp" }
           ].map((p) => (
             <div key={p.title} className="space-y-4 group cursor-pointer">
               <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-white/5 shadow-2xl">
@@ -258,7 +258,7 @@ export default function SystemExhibitionPage() {
               <textarea rows={5} className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-[#B48E4B] transition-all text-white placeholder:text-white/20 resize-none" placeholder="Details of your request..." required />
             </div>
             <div className="md:col-span-2 pt-6 text-center">
-              <button className="bg-[#B48E4B] text-[#0F172A] px-16 py-5 rounded-2xl font-black uppercase tracking-[0.3em] hover:brightness-110 transition-all shadow-2xl shadow-[#B48E4B]/10 active:scale-[0.98]">
+              <button className="px-16 py-5 btn-golden">
                 Submit Request
               </button>
             </div>

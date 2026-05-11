@@ -7,12 +7,12 @@ import { useState, useEffect } from "react";
 
 const HERO_SLIDES = [
   {
-    image: "/hero_tent_1778119496158.png",
+    image: "/hero_tent_1778119496158.webp",
     title: "Best in Singapore Event Solution",
     subtitle: "Professional and reliable event solution for all your needs"
   },
   {
-    image: "/clear_span_tent_1778119637488.png",
+    image: "/clear_span_tent_1778119637488.webp",
     title: "Premium Tentage Rentals",
     subtitle: "High-quality structures for corporate and private events"
   }
@@ -22,7 +22,7 @@ const USPs = [
   { title: "Best Price Guarantee", desc: "We offer competitive pricing without compromising quality.", icon: "💰" },
   { title: "Rapid Response", desc: "Get your quotation and site visit within 24 hours.", icon: "⚡" },
   { title: "Top Quality Materials", desc: "All our equipment is well-maintained and premium grade.", icon: "🏆" },
-  { title: "Reliability & Experience", desc: "Over 14 years of excellence in the event industry.", icon: "🤝" }
+  { title: "Reliability & Legacy", desc: "Over 14 years of excellence in the event industry.", icon: "🤝" }
 ];
 
 const REVIEWS = [
@@ -32,19 +32,19 @@ const REVIEWS = [
 ];
 
 const TENTAGE_ITEMS = [
-  { title: "Portable Tent", desc: "Fast and reliable shelter for small events and functions.", image: "/clear_span_tent_1778119637488.png" },
-  { title: "Single Sloping Tentage", desc: "Ideal for walkways and narrow spaces with modern design.", image: "/marquee_tent_1778119583238.png" },
-  { title: "A-Shaped Tentage", desc: "Classic robust structure for large gatherings and exhibitions.", image: "/staging_tent_1778119743118.png" },
-  { title: "Gazebo Tentage", desc: "Elegant and stylish tents for garden parties and high-end events.", image: "/multi_zone_tent_1778119810462.png" },
-  { title: "Aircon Tentage", desc: "Fully enclosed climate-controlled structures for maximum comfort.", image: "/hero_tent_1778119496158.png" },
-  { title: "Classic Tentage", desc: "Traditional reliable tentage for community and outdoor events.", image: "/clear_span_tent_1778119637488.png" }
+  { title: "Portable Tent", desc: "Fast and reliable shelter for small events and functions.", image: "/clear_span_tent_1778119637488.webp" },
+  { title: "Single Sloping Tentage", desc: "Ideal for walkways and narrow spaces with modern design.", image: "/marquee_tent_1778119583238.webp" },
+  { title: "A-Shaped Tentage", desc: "Classic robust structure for large gatherings and exhibitions.", image: "/staging_tent_1778119743118.webp" },
+  { title: "Gazebo Tentage", desc: "Elegant and stylish tents for garden parties and high-end events.", image: "/multi_zone_tent_1778119810462.webp" },
+  { title: "Aircon Tentage", desc: "Fully enclosed climate-controlled structures for maximum comfort.", image: "/hero_tent_1778119496158.webp" },
+  { title: "Classic Tentage", desc: "Traditional reliable tentage for community and outdoor events.", image: "/clear_span_tent_1778119637488.webp" }
 ];
 
 const EQUIPMENT_ITEMS = [
-  { title: "Chairs", desc: "Ambassador, Cushion, and Event chairs available.", image: "/chronicle_1_1778119918431.png" },
-  { title: "Tables", desc: "Round, Rectangular, and IBM tables for all needs.", image: "/marquee_tent_1778119583238.png" },
-  { title: "Fans / Cooling", desc: "Industrial Air Coolers and Misting Fans.", image: "/hero_tent_1778119496158.png" },
-  { title: "Flooring / Carpet", desc: "Staging, ground leveling, and premium carpets.", image: "/staging_tent_1778119743118.png" }
+  { title: "Chairs", desc: "Ambassador, Cushion, and Event chairs available.", image: "/chronicle_1_1778119918431.webp" },
+  { title: "Tables", desc: "Round, Rectangular, and IBM tables for all needs.", image: "/marquee_tent_1778119583238.webp" },
+  { title: "Fans / Cooling", desc: "Industrial Air Coolers and Misting Fans.", image: "/hero_tent_1778119496158.webp" },
+  { title: "Flooring / Carpet", desc: "Staging, ground leveling, and premium carpets.", image: "/staging_tent_1778119743118.webp" }
 ];
 
 export default function TentageRentalPage() {
@@ -98,10 +98,10 @@ export default function TentageRentalPage() {
             {HERO_SLIDES[currentSlide].subtitle}
           </motion.p>
           <div className="flex flex-col sm:flex-row gap-6">
-            <button className="bg-[#B48E4B] text-[#0F172A] px-12 py-5 rounded-full font-black uppercase tracking-[0.2em] hover:brightness-110 transition-all shadow-2xl shadow-[#B48E4B]/10 active:scale-95 text-xs">
+            <button className="px-12 py-5 btn-golden">
               Call us now
             </button>
-            <button className="border border-white/20 backdrop-blur-md text-white px-12 py-5 rounded-full font-black uppercase tracking-[0.2em] hover:bg-white/10 transition-all active:scale-95 text-xs">
+            <button className="px-12 py-5 btn-golden">
               WhatsApp Us
             </button>
           </div>
@@ -288,7 +288,7 @@ export default function TentageRentalPage() {
               <textarea rows={5} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-[#B48E4B] transition-all text-white placeholder:text-white/20 resize-none" placeholder="Details of your request..." required />
             </div>
             <div className="md:col-span-2 pt-8 text-center">
-              <button className="bg-[#B48E4B] text-[#0F172A] px-16 py-6 rounded-2xl font-black uppercase tracking-[0.3em] hover:brightness-110 transition-all shadow-2xl shadow-[#B48E4B]/20 active:scale-[0.98] text-xs">
+              <button className="px-16 py-6 btn-golden">
                 Submit Request
               </button>
             </div>

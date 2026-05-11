@@ -2,22 +2,22 @@ const services = [
   {
     title: "MARQUEE VILLAGES",
     description: "Custom-designed temporary venues for multi-day festivals and major corporate retreats.",
-    image: "/marquee_tent_1778119583238.png"
+    image: "/marquee_tent_1778119583238.webp"
   },
   {
     title: "CLEAR-SPAN PAVILIONS",
     description: "Weather-proof, versatile spaces for thousands, without internal supports.",
-    image: "/clear_span_tent_1778119637488.png"
+    image: "/clear_span_tent_1778119637488.webp"
   },
   {
     title: "STAGING & RIGGING",
     description: "Total production support for large concerts, galas, and keynotes.",
-    image: "/staging_tent_1778119743118.png"
+    image: "/staging_tent_1778119743118.webp"
   },
   {
     title: "MULTI-ZONE PLANNING",
     description: "Seamless flow and distinct atmospheres, curated within a single structure.",
-    image: "/multi_zone_tent_1778119810462.png"
+    image: "/singaporean_wedding_banquet.webp"
   },
   {
     title: "LUXURY WEDDINGS",

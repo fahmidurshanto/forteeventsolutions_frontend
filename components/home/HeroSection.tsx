@@ -4,7 +4,7 @@ export default function HeroSection() {
       {/* Background Image (Using standard img for external placeholder to avoid Next.js domain config errors) */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero_tent_1778119496158.png"
+          src="/hero_tent_1778119496158.webp"
           alt="Large Event Tent Background"
           className="w-full h-full object-cover object-center"
         />
@@ -19,7 +19,7 @@ export default function HeroSection() {
         <p className="text-lg md:text-xl lg:text-2xl text-white mb-10 font-light tracking-widest uppercase drop-shadow-md">
           Forte Solutions <span className="italic normal-case text-[#C5A059]">for</span> Mega-Events & Beyond.
         </p>
-        <button className="px-8 py-4 bg-gradient-to-r from-[#B48E4B] via-[#E8D08D] to-[#B48E4B] text-[#0F172A] font-bold text-sm md:text-base uppercase tracking-widest rounded-sm hover:brightness-110 transition-all shadow-lg border border-[#E8D08D]/50">
+        <button className="px-8 py-4 md:text-base btn-golden">
           Launch Full Marquee Portfolio
         </button>
       </div>

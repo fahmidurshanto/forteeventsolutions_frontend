@@ -9,30 +9,30 @@ const TENT_DATA = [
   {
     title: "3m x 3m tent",
     caption: "fits 1 x 4ft round table with 5-6pax",
-    openImage: "/clear_span_tent_1778119637488.png",
-    walledImage: "/marquee_tent_1778119583238.png",
+    openImage: "/clear_span_tent_1778119637488.webp",
+    walledImage: "/marquee_tent_1778119583238.webp",
   },
   {
     title: "3m x 4.5m tent",
     caption: "fits 2 x 2ft x 6ft rectangle table with 6-8pax",
-    openImage: "/marquee_tent_1778119583238.png",
-    walledImage: "/staging_tent_1778119743118.png",
+    openImage: "/marquee_tent_1778119583238.webp",
+    walledImage: "/staging_tent_1778119743118.webp",
   },
   {
     title: "3m x 6m tent",
     caption: "fits 2 x 4ft round table with 8-10pax",
-    openImage: "/staging_tent_1778119743118.png",
-    walledImage: "/multi_zone_tent_1778119810462.png",
+    openImage: "/staging_tent_1778119743118.webp",
+    walledImage: "/multi_zone_tent_1778119810462.webp",
   },
 ];
 
 const TENTAGE_DATA = [
-  { title: "Portable Tent", image: "/clear_span_tent_1778119637488.png", href: "/portable-tent" },
-  { title: "Single Sloping Tentage", image: "/marquee_tent_1778119583238.png", href: "/tentage-rental#sloping" },
-  { title: "A-Shaped Tentage", image: "/staging_tent_1778119743118.png", href: "/tentage-rental#a-shaped" },
-  { title: "Aircon Tentage", image: "/hero_tent_1778119496158.png", href: "/tentage-rental#aircon" },
-  { title: "Classic Tentage", image: "/clear_span_tent_1778119637488.png", href: "/tentage-rental#classic" },
-  { title: "Gazebo Tentage", image: "/multi_zone_tent_1778119810462.png", href: "/tentage-rental#gazebo" },
+  { title: "Portable Tent", image: "/clear_span_tent_1778119637488.webp", href: "/portable-tent" },
+  { title: "Single Sloping Tentage", image: "/marquee_tent_1778119583238.webp", href: "/tentage-rental#sloping" },
+  { title: "A-Shaped Tentage", image: "/staging_tent_1778119743118.webp", href: "/tentage-rental#a-shaped" },
+  { title: "Aircon Tentage", image: "/hero_tent_1778119496158.webp", href: "/tentage-rental#aircon" },
+  { title: "Classic Tentage", image: "/clear_span_tent_1778119637488.webp", href: "/tentage-rental#classic" },
+  { title: "Gazebo Tentage", image: "/multi_zone_tent_1778119810462.webp", href: "/tentage-rental#gazebo" },
 ];
 
 const EQUIPMENT_CATEGORIES = [
@@ -86,7 +86,7 @@ export default function Navbar() {
       <div className="flex-shrink-0 h-full">
         <Link href="/" className="block h-full py-1">
           <Image
-            src="/forteeventsolutions_logo.png"
+            src="/forteeventsolutions_logo.webp"
             alt="Forte Event Solutions Logo"
             width={300}
             height={100}

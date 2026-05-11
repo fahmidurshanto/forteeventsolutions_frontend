@@ -9,7 +9,7 @@ export default function FilterBar() {
         {filters.map((filter) => (
           <button 
             key={filter}
-            className="border border-[#B48E4B]/40 text-[#E8D08D] hover:bg-[#B48E4B] hover:text-[#0F172A] px-10 py-3 rounded-full font-black text-xs tracking-[0.2em] transition-all duration-300 uppercase shadow-lg shadow-[#B48E4B]/5 active:scale-95"
+            className="px-10 py-3 btn-golden"
           >
             {filter}
           </button>

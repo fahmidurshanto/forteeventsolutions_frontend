@@ -82,7 +82,7 @@ export default function RentalProductSection({
                 ))}
               </ul>
 
-              <button className="bg-[#B48E4B] hover:brightness-110 text-[#0F172A] px-10 py-5 rounded-full font-black uppercase tracking-[0.2em] transition-all mb-16 shadow-xl shadow-[#B48E4B]/10 active:scale-95 text-xs">
+              <button className="px-10 py-5 mb-16 btn-golden">
                 {buttonText}
               </button>
 

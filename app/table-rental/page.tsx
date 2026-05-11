@@ -22,7 +22,7 @@ export default function TableRentalPage() {
           {['ALL TABLES', 'ROUND', 'RECTANGLE', 'COCKTAIL'].map((filter) => (
             <button 
               key={filter}
-              className="border border-[#B48E4B]/40 text-[#E8D08D] hover:bg-[#B48E4B] hover:text-[#0F172A] px-10 py-3 rounded-full font-black text-xs tracking-[0.2em] transition-all duration-300 uppercase shadow-lg shadow-[#B48E4B]/5 active:scale-95"
+              className="px-10 py-3 btn-golden"
             >
               {filter}
             </button>
@@ -44,12 +44,12 @@ export default function TableRentalPage() {
         title="Round Tables"
         description="Classic round tables available in various sizes (3ft to 5ft). Perfect for wedding banquets, gala dinners, and social gatherings."
         details={['VARIOUS SIZES', 'PREMIUM TABLECLOTH OPTIONS', 'STURDY FOLDABLE LEGS']}
-        mainImage="/table_1.jpg"
+        mainImage="/table_1.webp"
         imageGrid={[
-          "/table_2.jpg",
-          "/table_1.jpg",
-          "/table_4.jpg",
-          "/table_2.jpg"
+          "/table_2.webp",
+          "/table_1.webp",
+          "/table_4.webp",
+          "/table_2.webp"
         ]}
       />
 
@@ -57,12 +57,12 @@ export default function TableRentalPage() {
         title="Rectangle Tables"
         description="Versatile rectangle tables for exhibition booths, registration counters, and buffet lines. Available in multiple lengths."
         details={['GS TABLES (2ft x 6ft)', 'CUSTOM SKIRTING AVAILABLE', 'HEAVY DUTY']}
-        mainImage="/table_2.jpg"
+        mainImage="/table_2.webp"
         imageGrid={[
-          "/table_1.jpg",
-          "/table_4.jpg",
-          "/table_2.jpg",
-          "/table_1.jpg"
+          "/table_1.webp",
+          "/table_4.webp",
+          "/table_2.webp",
+          "/table_1.webp"
         ]}
         reverse={true}
       />
@@ -71,12 +71,12 @@ export default function TableRentalPage() {
         title="Cocktail / High Tables"
         description="Elegant high tables for networking sessions and cocktail parties. Pair them with our bar stools for a complete look."
         details={['2ft ALUMINUM TOP', 'STYLISH SPANDEX COVERS', 'MODERN LOOK']}
-        mainImage="/table_4.jpg"
+        mainImage="/table_4.webp"
         imageGrid={[
-          "/table_2.jpg",
-          "/table_1.jpg",
-          "/table_4.jpg",
-          "/table_1.jpg"
+          "/table_2.webp",
+          "/table_1.webp",
+          "/table_4.webp",
+          "/table_1.webp"
         ]}
       />
 
@@ -84,12 +84,12 @@ export default function TableRentalPage() {
         title="Picnic Tables"
         description="Sturdy wooden picnic tables with attached benches. Ideal for outdoor carnivals, rustic themes, and communal dining."
         details={['SOLID WOOD FINISH', 'INTEGRATED BENCHES', 'COMMUNAL SEATING']}
-        mainImage="/table_1.jpg"
+        mainImage="/table_1.webp"
         imageGrid={[
-          "/table_4.jpg",
-          "/table_2.jpg",
-          "/table_1.jpg",
-          "/table_4.jpg"
+          "/table_4.webp",
+          "/table_2.webp",
+          "/table_1.webp",
+          "/table_4.webp"
         ]}
         reverse={true}
       />

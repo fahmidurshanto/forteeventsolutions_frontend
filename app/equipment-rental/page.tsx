@@ -22,61 +22,61 @@ const EQUIPMENT_DATA: Record<string, any> = {
       "Plastic Foldable Chairs (white/black)"
     ],
     accessories: ["Chair Covers", "Cloth Ribbon"],
-    images: ["/chair_1.jpg", "/image.jpg", "/chair_3.jpg", "/chair_4.jpg", "/chair_5.jpg", "/chair_6.png"]
+    images: ["/chair_1.webp", "/image.webp", "/chair_3.webp", "/chair_4.webp", "/chair_5.webp", "/chair_6.webp"]
   },
   "TABLES": {
     title: "Types of Tables",
     items: ["Round Tables", "Rectangular Tables", "IBM Tables", "Cocktail Tables"],
     accessories: ["Table Cloths", "Skirting"],
-    images: ["/table_1.jpg", "/table_2.jpg", "/table_4.jpg", "/table_1.jpg", "/table_2.jpg", "/table_4.jpg"]
+    images: ["/table_1.webp", "/table_2.webp", "/table_4.webp", "/table_1.webp", "/table_2.webp", "/table_4.webp"]
   },
   "FANS": {
     title: "Cooling & Fans",
     items: ["Industrial Standing Fans", "Misting Fans", "Wall-mounted Fans"],
     accessories: ["Extension Cords", "Safety Covers"],
-    images: ["/fan_1.jpg", "/fan_1.jpg", "/fan_1.jpg"]
+    images: ["/fan_1.webp", "/fan_1.webp", "/fan_1.webp"]
   },
   "LIGHTS": {
     title: "Lighting Solutions",
     items: ["Fairy Lights", "Spotlights", "Flood Lights", "LED Wash Lights"],
     accessories: ["Trusses", "Stands", "Dimmer Packs"],
-    images: ["/lights_1.jpg", "/lights_1.jpg", "/lights_1.jpg"]
+    images: ["/lights_1.webp", "/lights_1.webp", "/lights_1.webp"]
   },
   "AIR-CON": {
     title: "Air-Conditioning Systems",
     items: ["Portable Air-Cons", "Standing Air-Cons", "Tentage Air-Con Units"],
     accessories: ["Exhaust Pipes", "Power Generators"],
-    images: ["/aircon_1.jpg", "/aircon_1.jpg", "/aircon_1.jpg"]
+    images: ["/aircon_1.webp", "/aircon_1.webp", "/aircon_1.webp"]
   },
   "GENERATORS": {
     title: "Power Generators",
     items: ["Silent Generators (10kVA - 100kVA)", "Portable Petrol Generators"],
     accessories: ["Distribution Boards", "Heavy Duty Cables"],
-    images: ["/generator_1.jpg", "/generator_1.jpg", "/generator_1.jpg"]
+    images: ["/generator_1.webp", "/generator_1.webp", "/generator_1.webp"]
   },
   "STAGE": {
     title: "Staging Solutions",
     items: ["Modular Stage Platforms", "Custom Wooden Stages", "Runways", "Tiered Seating"],
     accessories: ["Stage Skirting", "Stairs", "Handrails", "Carpet Overlay"],
-    images: ["/staging_tent_1778119743118.png", "/staging_tent_1778119743118.png"]
+    images: ["/staging_tent_1778119743118.webp", "/staging_tent_1778119743118.webp"]
   },
   "FLOORING AND CARPET": {
     title: "Flooring & Carpets",
     items: ["Exhibition Carpets (Various Colors)", "Wooden Flooring", "Dance Floors", "Artificial Grass / Turf"],
     accessories: ["Edge Trims", "Underlay"],
-    images: ["/flooring_1.jpg", "/flooring_1.jpg", "/flooring_1.jpg"]
+    images: ["/flooring_1.webp", "/flooring_1.webp", "/flooring_1.webp"]
   },
   "BARRICADES": {
     title: "Crowd Control Barricades",
     items: ["Metal Q-Poles", "Queue Stands with Retractable Belts", "Mojo Barricades", "VIP Ropes"],
     accessories: ["Custom Printed Belts", "Signage Holders"],
-    images: ["/barricade_1.jpg", "/barricade_1.jpg", "/barricade_1.jpg"]
+    images: ["/barricade_1.webp", "/barricade_1.webp", "/barricade_1.webp"]
   },
   "SANITARY": {
     title: "Sanitary Solutions",
     items: ["Portable Toilets", "Executive Restroom Trailers", "Hand Wash Stations"],
     accessories: ["Janitorial Services", "Premium Toiletries"],
-    images: ["/sanitary_1.jpg", "/sanitary_1.jpg", "/sanitary_1.jpg"]
+    images: ["/sanitary_1.webp", "/sanitary_1.webp", "/sanitary_1.webp"]
   }
 };
 
@@ -200,7 +200,7 @@ export default function EquipmentRentalPage() {
               )}
 
               <div className="pt-12">
-                <button className="bg-[#B48E4B] text-[#0F172A] px-16 py-6 rounded-2xl font-black uppercase tracking-[0.3em] hover:brightness-110 transition-all shadow-2xl shadow-[#B48E4B]/10 active:scale-95 flex items-center space-x-3 text-xs">
+                <button className="px-16 py-6 flex btn-golden">
                   <span>Enquire about {activeTab.toLowerCase()}</span>
                 </button>
               </div>

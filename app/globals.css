@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .btn-golden {
+    @apply bg-gradient-to-r from-[#e9c557] via-[#f0e1b3] to-[#ffe59c] bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-[#0F172A] py-4 px-10 rounded-full font-black text-[10px] tracking-[0.3em] shadow-xl shadow-[#E8D08D]/20 hover:shadow-[#E8D08D]/40 hover:scale-105 active:scale-95 uppercase border border-white/30;
+  }
+}

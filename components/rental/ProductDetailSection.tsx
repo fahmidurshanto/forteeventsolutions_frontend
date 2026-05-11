@@ -43,7 +43,7 @@ export default function ProductDetailSection({
               </ul>
             </div>
             
-            <button className="bg-[#B48E4B] hover:brightness-110 text-[#0F172A] py-4 px-8 rounded-full font-black text-xs tracking-[0.3em] transition-all self-start shadow-xl shadow-[#B48E4B]/10 active:scale-95 uppercase">
+            <button className="py-4 px-10 self-start btn-golden">
               WhatsApp Enquiry
             </button>
           </div>

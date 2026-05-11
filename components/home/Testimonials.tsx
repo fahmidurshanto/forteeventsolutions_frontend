@@ -2,12 +2,12 @@ const testimonials = [
   {
     quote: "\"Forte transformed our entire festival site with their structures. Peerless execution.\"",
     author: "Couple Msuite",
-    image: "/sg_human_1.jpg"
+    image: "/sg_human_1.webp"
   },
   {
     quote: "\"Their multi-zone tent solutions for our global convention was a masterpiece.\"",
     author: "Corporate Event",
-    image: "/sg_human_2.jpg"
+    image: "/sg_human_2.webp"
   }
 ];
 

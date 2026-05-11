@@ -33,14 +33,14 @@ export default function ChairTableRentalPage() {
           "Ribbon (for PVC and Cushion Chairs)"
         ]}
         images={[
-          "/image.png",
-          "/image.jpg",
-          "/image_8.jpg",
-          "/image_7.jpg",
-          "/image_6.jpg",
-          "/image_5.jpg",
-          "/image_4.png",
-          "/image_3.png"
+          "/image.webp",
+          "/image.webp",
+          "/image_8.webp",
+          "/image_7.webp",
+          "/image_6.webp",
+          "/image_5.webp",
+          "/image_4.webp",
+          "/image_3.webp"
         ]}
         videoSrc="/wedding-hall.mp4"
       />
@@ -66,14 +66,14 @@ export default function ChairTableRentalPage() {
           "Centrepiece"
         ]}
         images={[
-          "/table_1.jpg",
-          "/table_2.jpg",
-          "/table_1.jpg",
-          "/table_4.jpg",
-          "/table_1.jpg",
-          "/table_2.jpg",
-          "/table_1.jpg",
-          "/table_4.jpg"
+          "/table_1.webp",
+          "/table_2.webp",
+          "/table_1.webp",
+          "/table_4.webp",
+          "/table_1.webp",
+          "/table_2.webp",
+          "/table_1.webp",
+          "/table_4.webp"
         ]}
         videoSrc="/wedding-reception-in-rural.mp4"
         reverse={true}
