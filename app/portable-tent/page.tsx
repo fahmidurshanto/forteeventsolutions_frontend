@@ -10,22 +10,26 @@ const TENT_TYPES = [
     id: "3x3",
     title: "3m x 3m Portable Gazebo Tent",
     image: "/clear_span_tent_1778119637488.webp",
+    desc: "Compact and easy to set up. Ideal for small gatherings and personal functions.",
   },
   {
     id: "4.5x3",
     title: "4.5m x 3m Portable Gazebo Tent",
     image: "/marquee_tent_1778119583238.webp",
+    desc: "Mid-size option for medium events, buffet setups, and outdoor fairs.",
   },
   {
     id: "6x3",
     title: "6m x 3m Portable Gazebo Tent",
     image: "/staging_tent_1778119743118.webp",
+    desc: "Spacious and sturdy, perfect for larger outdoor parties and exhibitions.",
   },
   {
     id: "custom",
-    title: "Purchase custom tent with/without print",
-    image: "/singaporean_wedding_banquet.webp",
-  }
+    title: "Purchase customised Tent with/without print",
+    image: "/hero_tent_1778119496158.webp",
+    desc: "Buy your own branded tent with custom printing for corporate events and promotions.",
+  },
 ];
 
 const PRODUCT_SECTIONS = [
@@ -117,18 +121,43 @@ export default function PortableTentPage() {
       <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-center text-2xl font-black mb-16 text-[#E8D08D] uppercase tracking-widest italic">Click to see the various sizes available</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {TENT_TYPES.map((tent) => (
+          {TENT_TYPES.map((tent, i) => (
             <motion.div
               key={tent.id}
-              whileHover={{ y: -15, scale: 1.02 }}
-              className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-white/10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ y: -8 }}
+              className="relative rounded-[24px] overflow-hidden shadow-2xl group cursor-pointer border border-white/10"
             >
-              <Image src={tent.image} alt={tent.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-white font-black italic text-xl leading-tight uppercase tracking-tighter">{tent.title}</h3>
-                <div className="w-12 h-1.5 bg-[#B48E4B] mt-4 rounded-full" />
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={tent.image}
+                  alt={tent.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 group-hover:via-black/50 transition-all duration-500" />
               </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-lg font-black uppercase italic tracking-tight text-white group-hover:text-[#E8D08D] transition-colors duration-300 leading-tight">
+                  {tent.title}
+                </h3>
+                <p className="text-gray-300 text-sm font-medium italic mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
+                  {tent.desc}
+                </p>
+                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="inline-block border border-[#B48E4B] text-[#B48E4B] text-[10px] font-black uppercase tracking-[0.25em] px-4 py-2 rounded-full">
+                    Enquire Now
+                  </span>
+                </div>
+              </div>
+
+              {/* Gold top accent on hover */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-[#B48E4B] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </motion.div>
           ))}
         </div>
