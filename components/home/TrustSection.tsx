@@ -26,9 +26,7 @@ const USPs = [
   }
 ];
 
-const PARTNERS = [
-  "Citibank", "Shell", "DBS Bank", "Sheng Siong", "CapitaLand", "FairPrice", "UOB", "DSTA"
-];
+
 
 export default function TrustSection() {
   return (

@@ -22,7 +22,7 @@ const USPs = [
   { title: "Best Price Guarantee", desc: "We offer competitive pricing without compromising quality.", icon: "💰" },
   { title: "Rapid Response", desc: "Get your quotation and site visit within 24 hours.", icon: "⚡" },
   { title: "Top Quality Materials", desc: "All our equipment is well-maintained and premium grade.", icon: "🏆" },
-  { title: "Reliability & Legacy", desc: "Over 14 years of excellence in the event industry.", icon: "🤝" }
+  { title: "Professional Support", desc: "Our expert team ensures your event is a success with dedicated end-to-end support.", icon: "🛠️" }
 ];
 
 const REVIEWS = [
@@ -207,7 +207,7 @@ export default function TentageRentalPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-20 items-center">
           <div className="space-y-8 text-center lg:text-left">
             <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter leading-tight text-white">
-              More than 500 companies have trusted us since 2010
+              Building trust with leading corporations across Singapore
             </h2>
             <div className="w-16 h-2 bg-[#B48E4B] rounded-full mx-auto lg:mx-0 shadow-lg shadow-[#B48E4B]/20" />
             <div className="flex text-yellow-400 text-2xl justify-center lg:justify-start drop-shadow-lg">★★★★★</div>
