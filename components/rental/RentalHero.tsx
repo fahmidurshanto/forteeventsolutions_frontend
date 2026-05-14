@@ -14,7 +14,7 @@ export default function RentalHero({ title }: RentalHeroProps) {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000&auto=format&fit=crop")', 
+          backgroundImage: 'url("/hero_tent_1778119496158.webp")', 
         }}
       >
         <div className="absolute inset-0 bg-[#0F172A]/80 backdrop-blur-[1px]" />

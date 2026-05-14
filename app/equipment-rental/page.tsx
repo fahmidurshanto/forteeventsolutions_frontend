@@ -22,7 +22,7 @@ const EQUIPMENT_DATA: Record<string, any> = {
       "Plastic Foldable Chairs (white/black)"
     ],
     accessories: ["Chair Covers", "Cloth Ribbon"],
-    images: ["/chair_1.webp", "/image.webp", "/chair_3.webp", "/chair_4.webp", "/chair_5.webp", "/chair_6.webp"]
+    images: ["/chair_1.webp", "/image.webp", "/tiffany-chair.jpg", "/chair_1.webp", "/chair_5.webp", "/chair_6.webp"]
   },
   "TABLES": {
     title: "Types of Tables",
@@ -96,7 +96,7 @@ export default function EquipmentRentalPage() {
           <p className="text-gray-400 font-bold italic leading-relaxed text-lg opacity-80">
             Our Equipment Rental can be done in conjunction with your tentage or as a standalone.
             We have a large range of equipment ready for rental in 1-week notice. If you have any last
-            minute request, you may also contact us directly at our hotline 98253390. Do use the tabs
+            minute request, you may also contact us directly at our hotline 9123 4567. Do use the tabs
             below to search for the type of equipment you need. If the item is not in the list below,
             you may also check with us for ready stocks.
           </p>

@@ -13,11 +13,11 @@ const BENEFITS = [
 ];
 
 const SELECTION_GALLERY = [
-  "/marquee_tent_1778119583238.webp",
-  "/clear_span_tent_1778119637488.webp",
-  "/staging_tent_1778119743118.webp",
-  "/singaporean_wedding_banquet.webp",
-  "/hero_tent_1778119496158.webp"
+  "/wall_panel_1.webp",
+  "/wall_panel_2.webp",
+  "/wall_panel_5.webp",
+  "/counter_2.webp",
+  "/image_4.webp"
 ];
 
 const PRODUCT_SECTIONS = [

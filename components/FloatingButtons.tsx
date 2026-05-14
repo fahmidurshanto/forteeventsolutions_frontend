@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const WHATSAPP_NUMBER = "+6598253390"; // Update this with the real number
+const WHATSAPP_NUMBER = "+65 9123 4567"; // Update this with the real number
 const EMAIL = "contact@forteeventsolutions.com";
 
 export default function FloatingButtons() {

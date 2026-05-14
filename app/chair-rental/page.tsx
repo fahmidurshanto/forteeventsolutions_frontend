@@ -10,7 +10,7 @@ import EnquiryForm from "@/components/rental/EnquiryForm";
 const CHAIR_PRODUCTS = [
   {
     title: "Tiffany Chairs",
-    image: "/chair_3.webp",
+    image: "/tiffany-chair.jpg",
     desc: "Elegant gold Tiffany chairs with white cushions. Perfect for weddings and luxury events.",
   },
   {
@@ -19,13 +19,13 @@ const CHAIR_PRODUCTS = [
     desc: "Durable, lightweight and stackable white PVC chairs for outdoor and casual events.",
   },
   {
-    title: "Picnic Benches",
-    image: "/singaporean_wedding_banquet.webp",
-    desc: "Sturdy wooden picnic benches ideal for outdoor fairs, carnivals, and community events.",
+    title: "Bistro Chairs",
+    image: "/bistro-chair.webp",
+    desc: "Stylish and comfortable bistro-style chairs for cafes, garden parties, and outdoor events.",
   },
   {
     title: "Foldable Chairs",
-    image: "/chair_4.webp",
+    image: "/chair_1.webp",
     desc: "Space-saving black foldable chairs for conferences, seminars, and large gatherings.",
   },
   {
@@ -85,6 +85,7 @@ export default function ChairRentalPage() {
                     alt={product.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={i === 0}
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Dark overlay always present, stronger on hover */}

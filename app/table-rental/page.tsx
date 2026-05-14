@@ -29,7 +29,7 @@ const TABLE_PRODUCTS = [
   },
   {
     title: "Picnic Tables",
-    image: "/chair_4.webp",
+    image: "/table_1.webp",
     desc: "Solid wood picnic tables with integrated benches. Ideal for outdoor carnivals and rustic events.",
   },
 ];

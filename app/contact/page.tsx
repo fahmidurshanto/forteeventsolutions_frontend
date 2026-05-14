@@ -80,15 +80,15 @@ export default function ContactPage() {
               <div className="space-y-10 font-bold italic text-gray-200">
                 <div className="space-y-2 group">
                   <p className="text-xl">Samuel - <span className="text-[#B48E4B] group-hover:underline underline-offset-8">80232389</span></p>
-                  <p className="text-sm text-gray-500 font-medium">Samuel@tentagerentalsingapore.com</p>
+                  <p className="text-sm text-gray-500 font-medium">Samuel@forteeventsolutions.com</p>
                 </div>
                 <div className="space-y-2 group">
                   <p className="text-xl">Jia Hao - <span className="text-[#B48E4B] group-hover:underline underline-offset-8">80447382</span></p>
-                  <p className="text-sm text-gray-500 font-medium">Jiahao@tentagerentalsingapore.com</p>
+                  <p className="text-sm text-gray-500 font-medium">Jiahao@forteeventsolutions.com</p>
                 </div>
                 <div className="space-y-2 group">
-                  <p className="text-xl">Jonathan - <span className="text-[#B48E4B] group-hover:underline underline-offset-8">98253390</span></p>
-                  <p className="text-sm text-gray-500 font-medium">Jonathan@tentagerentalsingapore.com</p>
+                  <p className="text-xl">Jonathan - <span className="text-[#B48E4B] group-hover:underline underline-offset-8">9123 4567</span></p>
+                  <p className="text-sm text-gray-500 font-medium">Jonathan@forteeventsolutions.com</p>
                 </div>
               </div>
             </div>

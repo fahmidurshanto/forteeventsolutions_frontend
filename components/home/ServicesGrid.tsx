@@ -17,17 +17,17 @@ const services = [
   {
     title: "MULTI-ZONE PLANNING",
     description: "Seamless flow and distinct atmospheres, curated within a single structure.",
-    image: "/singaporean_wedding_banquet.webp"
+    image: "/multi-zone-planning.webp"
   },
   {
     title: "LUXURY WEDDINGS",
     description: "Breathtaking backdrops and elegant structures tailored for your special day.",
-    image: "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1000&auto=format&fit=crop"
+    image: "/wedding-image.webp"
   },
   {
     title: "CUSTOM EXHIBITIONS",
     description: "Expansive layouts designed to showcase brands and host large-scale trade shows.",
-    image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=1000&auto=format&fit=crop"
+    image: "/custom-exibition.webp"
   }
 ];
 

@@ -5,12 +5,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-  "/singaporean_wedding_banquet.webp",
+  "/staging_tent_1778119743118.webp",
   "/image_8.webp",
   "/image_7.webp",
   "/image_6.webp",
   "/image_5.webp",
-  "/chronicle_1_1778119918431.webp"
+  "/image_4.webp",
+  "/image_3.webp",
+  "/marquee_tent_1778119583238.webp",
+  "/clear_span_tent_1778119637488.webp",
+  "/image.webp"
 ];
 
 export default function EventChronicles() {
