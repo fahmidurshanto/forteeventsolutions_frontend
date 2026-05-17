@@ -5,74 +5,53 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const TENT_DATA = [
-  {
-    title: "3m x 3m tent",
-    caption: "fits 1 x 4ft round table with 5-6pax",
-    openImage: "/clear_span_tent_1778119637488.webp",
-    walledImage: "/marquee_tent_1778119583238.webp",
-  },
-  {
-    title: "3m x 4.5m tent",
-    caption: "fits 2 x 2ft x 6ft rectangle table with 6-8pax",
-    openImage: "/marquee_tent_1778119583238.webp",
-    walledImage: "/staging_tent_1778119743118.webp",
-  },
-  {
-    title: "3m x 6m tent",
-    caption: "fits 2 x 4ft round table with 8-10pax",
-    openImage: "/staging_tent_1778119743118.webp",
-    walledImage: "/singaporean_wedding_banquet.webp",
-  },
-];
 
 const TENTAGE_DATA = [
-  { title: "Portable Tent", image: "/clear_span_tent_1778119637488.webp", href: "/portable-tent" },
-  { title: "Single Sloping Tentage", image: "/marquee_tent_1778119583238.webp", href: "/tentage-rental#sloping" },
-  { title: "A-Shaped Tentage", image: "/staging_tent_1778119743118.webp", href: "/tentage-rental#a-shaped" },
-  { title: "Aircon Tentage", image: "/hero_tent_1778119496158.webp", href: "/tentage-rental#aircon" },
-  { title: "Classic Tentage", image: "/clear_span_tent_1778119637488.webp", href: "/tentage-rental#classic" },
-  { title: "Gazebo Tentage", image: "/singaporean_wedding_banquet.webp", href: "/tentage-rental#gazebo" },
+  { title: "Dome Tent", image: "/photos_from_pdf/WhatsApp Image 2026-05-16 at 10.10.58 AM.jpeg", href: "/portable-tent/dome-tent" },
+  { title: "A-Shaped Tent", image: "/staging_tent_1778119743118.webp", href: "/portable-tent/a-shaped-tent" },
+  { title: "Slope Tent", image: "/marquee_tent_1778119583238.webp", href: "/portable-tent/slope-tent" },
+  { title: "Gazebo Tent", image: "/singaporean_wedding_banquet.webp", href: "/portable-tent/gazebo-tent" },
+  { title: "Air Cooler Tent", image: "/clear_span_tent_1778119637488.webp", href: "/portable-tent/air-cooler-tent" },
+  { title: "'Wayang' Tent and Stage", image: "/%27Wayang%27%20Tent%20and%20Stage/wayang_tent_1.webp", href: "/portable-tent/wayang-tent" },
+  { title: "Related Accessories", image: "/Accessories/accessories_11.webp", href: "/accessories" },
 ];
 
 const EQUIPMENT_CATEGORIES = [
   {
-    title: "Electric Equipment",
+    title: "Event & Panel Rentals",
     items: [
-      "Battery Generator Rental – Bluetti",
-      "Fan Rental | Industrial Fans | Aircooler",
-      "Portable Aircon Rental",
-      "Generator Rental",
-      "Lights",
-      "Wiring Rental",
-      "PA System Rental",
-      "Projector Rental"
+      { name: "Chair & Table Rental", href: "/chair-table-rental" },
+      { name: "• Chair Rental & PVC Details", href: "/chair-rental" },
+      { name: "• Table Rental Catalog", href: "/table-rental" },
+      { name: "System / Exhibition Panel", href: "/system-exhibition-panel" },
+      { name: "Equipment Rental Main", href: "/equipment-rental" },
+      { name: "Road Safety & Barriers", href: "/chair-rental/road-closure" }
     ]
   },
   {
-    title: "Others",
+    title: "Portable Tent Collections",
     items: [
-      "Bouncy Castle Rental",
-      "Barricades Rental",
-      "Chairs and Table Rental | Well Maintained & Affordable",
-      "• Chair Rental",
-      "• Table Rental – Cocktail, Round, Square, Rectangle Tables",
-      "Exhibition Carpets for Rental",
-      "Flooring and Carpeting",
-      "Portable Tent",
-      "Portable Toilets",
-      "Queue Poles",
-      "Rostrum Rental",
-      "System Panel / Exhibition Panel",
-      "Stage Rental"
+      { name: "Portable Tent Hub", href: "/portable-tent" },
+      { name: "• A-Shaped Tent", href: "/portable-tent/a-shaped-tent" },
+      { name: "• Slope Tent", href: "/portable-tent/slope-tent" },
+      { name: "• Gazebo Tent", href: "/portable-tent/gazebo-tent" },
+      { name: "• Dome Tent", href: "/portable-tent/dome-tent" },
+      { name: "• Wayang Tent & Stage", href: "/portable-tent/wayang-tent" },
+      { name: "• Air Cooler Tent", href: "/portable-tent/air-cooler-tent" }
     ]
   },
   {
-    title: "Wedding Decoration",
+    title: "Premium Accessories",
     items: [
-      "Fairy Lights Rental",
-      "Wedding Arch Rental",
-      "Wedding Backdrop"
+      { name: "Accessories Main Directory", href: "/accessories" },
+      { name: "• Barricades & Q-Poles", href: "/accessories/barricades" },
+      { name: "• Lighting Solutions", href: "/accessories/lighting-solutions" },
+      { name: "• Fans & Cooling Systems", href: "/accessories/cooling-systems" },
+      { name: "• Table Cloth & Skirting", href: "/accessories/table-cloth-skirting" },
+      { name: "• Mobile Toilets", href: "/accessories/mobile-toilet" },
+      { name: "• Portable Wash Basin", href: "/accessories/wash-basin" },
+      { name: "• Custom Garment Racks", href: "/accessories/custom-rack" },
+      { name: "• Flower Arrangements", href: "/accessories/flower-arrangement" }
     ]
   }
 ];
@@ -129,7 +108,7 @@ export default function Navbar() {
           </AnimatePresence>
         </div>
 
-        {/* Portable Tent Mega Menu */}
+        {/* Portable Tent Horizontal Mega Menu */}
         <div
           className="relative h-full flex items-center group"
           onMouseEnter={() => setActiveMenu('tent')}
@@ -145,77 +124,9 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-[#1e293b] shadow-[0_25px_60px_rgba(0,0,0,0.4)] border border-white/10 py-8 px-10 z-[110] rounded-b-xl"
-              >
-                <div className="grid grid-cols-1 gap-10">
-                  {TENT_DATA.map((tent, index) => (
-                    <div key={index} className="space-y-3">
-                      <div className="grid grid-cols-2 gap-4">
-                        {/* Open Variant */}
-                        <motion.div
-                          whileHover={{ y: -3 }}
-                          className="relative aspect-[16/10] bg-gray-800 rounded shadow-sm border border-white/10 overflow-hidden group/img"
-                        >
-                          <Image
-                            src={tent.openImage}
-                            alt={`${tent.title} open`}
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover/img:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity" />
-                        </motion.div>
-
-                        {/* Walled Variant */}
-                        <motion.div
-                          whileHover={{ y: -3 }}
-                          className="relative aspect-[16/10] bg-gray-800 rounded shadow-sm border border-white/10 overflow-hidden group/img"
-                        >
-                          <Image
-                            src={tent.walledImage}
-                            alt={`${tent.title} with walls`}
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover/img:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity" />
-                        </motion.div>
-                      </div>
-
-                      {/* Caption Section */}
-                      <div className="text-center">
-                        <h3 className="text-[12px] font-black text-white uppercase tracking-widest mb-0.5 italic leading-none">
-                          {tent.title}
-                        </h3>
-                        <p className="text-[9px] text-gray-400 font-bold leading-tight">
-                          — {tent.caption}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        {/* Tentage Rental Horizontal Mega Menu */}
-        <div
-          className="relative h-full flex items-center group"
-          onMouseEnter={() => setActiveMenu('tentage')}
-          onMouseLeave={() => setActiveMenu(null)}
-        >
-          <Link href="/tentage-rental" className="font-bold text-white tracking-tight">
-            Tentage Rental
-          </Link>
-          <AnimatePresence>
-            {activeMenu === 'tentage' && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
                 className="absolute top-full left-1/2 -translate-x-1/2 w-[1100px] bg-[#1e293b] shadow-[0_25px_60px_rgba(0,0,0,0.4)] border border-white/10 py-10 px-8 z-[110] rounded-b-xl"
               >
-                <div className="grid grid-cols-6 gap-6">
+                <div className="grid grid-cols-7 gap-6">
                   {TENTAGE_DATA.map((item, index) => (
                     <Link key={index} href={item.href} className="group/item">
                       <div className="space-y-4">
@@ -266,11 +177,17 @@ export default function Navbar() {
                       <ul className="space-y-2.5">
                         {category.items.map((item, i) => (
                           <li key={i} className="group/item flex items-start gap-2 cursor-pointer">
-                            {!item.startsWith('•') && <span className="text-gray-500 text-[10px] mt-1.5 group-hover/item:text-[#B48E4B] transition-colors">▸</span>}
-                            <span className={`text-[13px] font-medium leading-tight transition-colors group-hover/item:text-[#B48E4B] ${item.startsWith('•') ? 'text-gray-500 pl-4' : 'text-gray-300'
-                              }`}>
-                              {item}
-                            </span>
+                            {!item.name.startsWith('•') && (
+                              <span className="text-gray-500 text-[10px] mt-1 group-hover/item:text-[#B48E4B] transition-colors">▸</span>
+                            )}
+                            <Link
+                              href={item.href}
+                              className={`text-[13px] font-medium leading-tight transition-colors group-hover/item:text-[#B48E4B] ${
+                                item.name.startsWith('•') ? 'text-gray-500 pl-4' : 'text-gray-300'
+                              }`}
+                            >
+                              {item.name}
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -283,6 +200,7 @@ export default function Navbar() {
         </div>
 
         <Link href="/system-exhibition-panel" className="font-semibold text-gray-400 hover:text-white transition-colors tracking-tight">System/Exhibition Panel</Link>
+        <Link href="/accessories" className="font-semibold text-gray-400 hover:text-white transition-colors tracking-tight">Accessories</Link>
         <Link href="/contact" className="font-semibold text-gray-400 hover:text-white transition-colors tracking-tight">Contact Us</Link>
       </div>
 

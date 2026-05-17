@@ -78,6 +78,28 @@ export default function ChairTableRentalPage() {
         videoSrc="/wedding-reception-in-rural.mp4"
         reverse={true}
       />
+
+      <RentalProductSection 
+        title="Road Closure Equipment"
+        description="Ensure safety, clear navigation, and perfect crowd control at your outdoor events. We provide professional-grade traffic barricades, crowd barriers, road closure signs, and safety accessories to secure public areas and street venues."
+        items={[
+          "Modular Road Closure Barricades",
+          "Interlocking Steel Crowd Control Barriers",
+          "Reflective Directional Traffic Signage",
+          "High-Visibility Safety Traffic Cones"
+        ]}
+        buttonText="Enquire about road closure gear"
+        images={[
+          "/Road%20Closure/road_closure_1.webp",
+          "/Road%20Closure/road_closure_2.webp",
+          "/Road%20Closure/road_closure_3.webp",
+          "/Road%20Closure/road_closure_4.webp",
+          "/Road%20Closure/road_closure_1.webp",
+          "/Road%20Closure/road_closure_2.webp",
+          "/Road%20Closure/road_closure_3.webp",
+          "/Road%20Closure/road_closure_4.webp"
+        ]}
+      />
     </main>
   );
 }

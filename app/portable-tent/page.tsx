@@ -3,87 +3,53 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const TENT_TYPES = [
   {
-    id: "3x3",
-    title: "3m x 3m Portable Gazebo Tent",
-    image: "/clear_span_tent_1778119637488.webp",
-    desc: "Compact and easy to set up. Ideal for small gatherings and personal functions.",
+    id: "dome-tent",
+    title: "Dome Tent",
+    image: "/photos_from_pdf/WhatsApp Image 2026-05-16 at 10.10.58 AM.jpeg",
+    desc: "Versatile curved-roof structure for events of all sizes. Available in widths: 10ft, 20ft, 33ft, 40ft, 52ft, and 60ft.",
+    href: "/portable-tent/dome-tent",
   },
   {
-    id: "4.5x3",
-    title: "4.5m x 3m Portable Gazebo Tent",
-    image: "/marquee_tent_1778119583238.webp",
-    desc: "Mid-size option for medium events, buffet setups, and outdoor fairs.",
-  },
-  {
-    id: "6x3",
-    title: "6m x 3m Portable Gazebo Tent",
+    id: "a-shaped-tent",
+    title: "A-Shaped Tent",
     image: "/staging_tent_1778119743118.webp",
-    desc: "Spacious and sturdy, perfect for larger outdoor parties and exhibitions.",
+    desc: "Classic peaked-roof tentage ideal for large gatherings and exhibitions. Available in widths: 20ft, 24ft, 28ft, 32ft, 37ft, 40ft, and 52ft.",
+    href: "/portable-tent/a-shaped-tent",
   },
   {
-    id: "custom",
-    title: "Purchase customised Tent with/without print",
-    image: "/hero_tent_1778119496158.webp",
-    desc: "Buy your own branded tent with custom printing for corporate events and promotions.",
-  },
-];
-
-const PRODUCT_SECTIONS = [
-  {
-    id: "3x3-detail",
-    title: "3m x 3m Portable Gazebo Tent",
-    specs: [
-      "Dimension: 3m x 3m x 2.4m - 2.8m (adjustable height)",
-      "Roof with side wall coverings: White / 4 sides",
-      "Colors available: Red, Blue, Green, White",
-      "Weight: 22kg",
-      "View Capacity & Recommendations",
-      "fits 1 x 4ft round table with 5-6pax",
-      "fits 1 x 4ft / 6ft rectangular table with 6-8pax",
-    ],
-    price: "From $180.00",
-    images: ["/clear_span_tent_1778119637488.webp", "/marquee_tent_1778119583238.webp"]
+    id: "slope-tent",
+    title: "Slope Tent",
+    image: "/marquee_tent_1778119583238.webp",
+    desc: "Single-slope design perfect for walkways and narrow spaces. Available in widths: 8ft, 10ft, 12ft, 14ft, 16ft, 18.5ft, and 20ft.",
+    href: "/portable-tent/slope-tent",
   },
   {
-    id: "4.5x3-detail",
-    title: "3m x 4.5m Portable Gazebo Tent",
-    specs: [
-      "Dimension: 3m x 4.5m x 2.4m - 2.8m",
-      "Roof with side wall coverings: White / 4 sides",
-      "Colors available: White",
-      "View Capacity & Recommendations",
-      "fits 2 x 4ft round table with 10-12pax",
-      "fits 2 x 4ft / 6ft rectangular table with 12-16pax",
-    ],
-    price: "From $240.00",
-    images: ["/marquee_tent_1778119583238.webp", "/clear_span_tent_1778119637488.webp"]
+    id: "gazebo-tent",
+    title: "Gazebo Tent",
+    image: "/singaporean_wedding_banquet.webp",
+    desc: "Elegant and portable gazebo tents for garden parties, roadshows, and outdoor functions.",
+    href: "/portable-tent/gazebo-tent",
   },
   {
-    id: "6x3-detail",
-    title: "3m x 6m Portable Gazebo Tent",
-    specs: [
-      "Dimension: 3m x 6m x 2.4m - 2.8m",
-      "Roof with side wall coverings: White / 4 sides",
-      "Colors available: White",
-      "View Capacity & Recommendations",
-      "fits 3 x 4ft round table with 15-18pax",
-      "fits 3 x 4ft / 6ft rectangular table with 18-24pax",
-    ],
-    price: "From $320.00",
-    images: ["/staging_tent_1778119743118.webp", "/singaporean_wedding_banquet.webp"]
-  }
+    id: "air-cooler-tent",
+    title: "Air Cooler Tent",
+    image: "/clear_span_tent_1778119637488.webp",
+    desc: "Fully enclosed climate-controlled tentage with built-in air cooling for maximum guest comfort.",
+    href: "/portable-tent/air-cooler-tent",
+  },
+  {
+    id: "wayang-tent",
+    title: "'Wayang' Tent and Stage",
+    image: "/%27Wayang%27%20Tent%20and%20Stage/wayang_tent_1.webp",
+    desc: "Traditional wayang-style tent with integrated stage setup for cultural performances and community events.",
+    href: "/portable-tent/wayang-tent",
+  },
 ];
 
 export default function PortableTentPage() {
-  const [activeThumbnails, setActiveThumbnails] = useState<Record<string, number>>({
-    "3x3-detail": 0,
-    "4.5x3-detail": 0,
-    "6x3-detail": 0,
-  });
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
@@ -120,50 +86,51 @@ export default function PortableTentPage() {
       {/* Grid Selection */}
       <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-center text-2xl font-black mb-16 text-[#E8D08D] uppercase tracking-widest italic">Click to see the various sizes available</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {TENT_TYPES.map((tent, i) => (
-            <motion.div
-              key={tent.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ y: -8 }}
-              className="relative rounded-[24px] overflow-hidden shadow-2xl group cursor-pointer border border-white/10"
-            >
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src={tent.image}
-                  alt={tent.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
-              {/* Hover Overlay - Solid layer for maximum contrast */}
-              <div className="absolute inset-0 bg-[#0F172A]/0 group-hover:bg-[#0F172A]/60 transition-colors duration-500 z-0" />
-
-              {/* Gradient Overlay - Smooth transition for top/bottom text readability */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 opacity-90 group-hover:opacity-100 transition-opacity duration-500 z-0" />
-
-              <div className="absolute inset-0 p-6 flex flex-col justify-between z-10">
-                <h3 className="text-lg font-black uppercase italic tracking-tight text-white group-hover:text-[#E8D08D] transition-colors duration-300 leading-tight">
-                  {tent.title}
-                </h3>
-                
-                <div className="space-y-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <p className="text-gray-300 text-sm font-medium italic leading-relaxed">
-                    {tent.desc}
-                  </p>
-                  <span className="inline-block border border-[#B48E4B] text-[#B48E4B] text-[10px] font-black uppercase tracking-[0.25em] px-4 py-2 rounded-full">
-                    Enquire Now
-                  </span>
+            <Link key={tent.id} href={tent.href}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                whileHover={{ y: -8 }}
+                className="relative rounded-[24px] overflow-hidden shadow-2xl group cursor-pointer border border-white/10 h-full"
+              >
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={tent.image}
+                    alt={tent.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
-              </div>
+                {/* Hover Overlay - Solid layer for maximum contrast */}
+                <div className="absolute inset-0 bg-[#0F172A]/0 group-hover:bg-[#0F172A]/60 transition-colors duration-500 z-0" />
 
-              {/* Gold top accent on hover */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#B48E4B] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20" />
-            </motion.div>
+                {/* Gradient Overlay - Smooth transition for top/bottom text readability */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 opacity-90 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+
+                <div className="absolute inset-0 p-6 flex flex-col justify-between z-10">
+                  <h3 className="text-lg font-black uppercase italic tracking-tight text-white group-hover:text-[#E8D08D] transition-colors duration-300 leading-tight">
+                    {tent.title}
+                  </h3>
+                  
+                  <div className="space-y-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <p className="text-gray-300 text-sm font-medium italic leading-relaxed">
+                      {tent.desc}
+                    </p>
+                    <span className="inline-block border border-[#B48E4B] text-[#B48E4B] text-[10px] font-black uppercase tracking-[0.25em] px-4 py-2 rounded-full">
+                      Enquire Now
+                    </span>
+                  </div>
+                </div>
+
+                {/* Gold top accent on hover */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-[#B48E4B] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20" />
+              </motion.div>
+            </Link>
           ))}
         </div>
 
@@ -193,70 +160,6 @@ export default function PortableTentPage() {
           </p>
         </div>
       </section>
-
-      {/* Product Detail Sections */}
-      {PRODUCT_SECTIONS.map((section, idx) => (
-        <section key={section.id} className={`py-32 px-4 md:px-8 ${idx % 2 === 1 ? 'bg-[#0F172A]' : 'bg-[#131B2E]'}`}>
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-
-            {/* Specs */}
-            <div className={`space-y-10 ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
-              <div className="space-y-4">
-                <h2 className="text-4xl font-black text-white uppercase italic tracking-tighter leading-tight">
-                  {section.title}
-                </h2>
-                <div className="w-20 h-2 bg-[#B48E4B] rounded-full" />
-              </div>
-              <ul className="space-y-5">
-                {section.specs.map((spec, i) => (
-                  <li key={i} className="flex items-start space-x-4 text-gray-400">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#B48E4B] mt-1.5 shrink-0 shadow-sm shadow-[#B48E4B]/40" />
-                    <span className={`text-base font-bold ${spec.toLowerCase().includes('fits') ? 'text-[#E8D08D]' : ''}`}>{spec}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
-                <p className="text-3xl font-black text-[#B48E4B] italic tracking-tighter">{section.price}</p>
-                <button className="px-10 py-4 flex items-center justify-center gap-3 btn-golden">
-                  <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-                  <span>WhatsApp Us</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Gallery */}
-            <div className="space-y-6">
-              <motion.div
-                key={activeThumbnails[section.id]}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.4)] border-8 border-white/5"
-              >
-                <Image
-                  src={section.images[activeThumbnails[section.id] || 0]}
-                  alt={section.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </motion.div>
-              <div className="flex gap-4 justify-center">
-                {section.images.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveThumbnails(prev => ({ ...prev, [section.id]: i }))}
-                    className={`relative w-28 aspect-[4/3] rounded-xl overflow-hidden border-4 transition-all duration-300 ${activeThumbnails[section.id] === i ? 'border-[#B48E4B] scale-110 shadow-lg' : 'border-transparent opacity-40 hover:opacity-100 hover:scale-105'
-                      }`}
-                  >
-                    <Image src={img} alt="thumbnail" fill sizes="112px" className="object-cover" />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-          </div>
-        </section>
-      ))}
 
       {/* Pairing Section */}
       <section className="py-32 px-4 md:px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">

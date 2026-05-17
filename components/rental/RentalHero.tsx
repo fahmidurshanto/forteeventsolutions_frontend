@@ -5,16 +5,17 @@ import { motion } from 'framer-motion';
 
 interface RentalHeroProps {
   title: string;
+  image?: string;
 }
 
-export default function RentalHero({ title }: RentalHeroProps) {
+export default function RentalHero({ title, image = "/hero_tent_1778119496158.webp" }: RentalHeroProps) {
   return (
     <section className="relative h-[450px] w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url("/hero_tent_1778119496158.webp")', 
+          backgroundImage: `url("${image}")`, 
         }}
       >
         <div className="absolute inset-0 bg-[#0F172A]/80 backdrop-blur-[1px]" />

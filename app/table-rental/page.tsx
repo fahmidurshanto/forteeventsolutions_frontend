@@ -5,27 +5,13 @@ import { motion } from "framer-motion";
 import RentalHero from "@/components/rental/RentalHero";
 import ServiceFeatures from "@/components/rental/ServiceFeatures";
 import EnquiryForm from "@/components/rental/EnquiryForm";
+import Link from "next/link";
 
 const TABLE_PRODUCTS = [
-  {
-    title: "Circle Tables",
-    image: "/table_1.webp",
-    desc: "Classic round tables in various sizes (3ft–5ft). Perfect for wedding banquets, gala dinners, and social gatherings.",
-  },
-  {
-    title: "Rectangle Tables",
-    image: "/table_2.webp",
-    desc: "Versatile rectangle tables for exhibition booths, registration counters, and buffet lines.",
-  },
   {
     title: "Cocktail Tables",
     image: "/table_4.webp",
     desc: "Elegant high tables for networking sessions and cocktail parties. Pair with our bar stools.",
-  },
-  {
-    title: "Square Tables",
-    image: "/singaporean_wedding_banquet.webp",
-    desc: "Sturdy 3ft × 3ft square tables suitable for small gatherings, card games, and display setups.",
   },
   {
     title: "Picnic Tables",
@@ -60,8 +46,8 @@ export default function TableRentalPage() {
             <div className="w-20 h-1.5 bg-[#B48E4B] mx-auto rounded-full shadow-lg shadow-[#B48E4B]/20" />
           </div>
 
-          {/* 5-card grid: 3 on top, 2 centred on bottom */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* 2-card grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {TABLE_PRODUCTS.map((product, i) => (
               <motion.div
                 key={i}
@@ -70,10 +56,7 @@ export default function TableRentalPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ y: -8 }}
-                className={`group relative rounded-[24px] overflow-hidden shadow-2xl border border-white/10 cursor-pointer
-                  ${i === 3 ? "lg:col-start-1" : ""}
-                  ${i === 4 ? "lg:col-start-2" : ""}
-                `}
+                className="group relative rounded-[24px] overflow-hidden shadow-2xl border border-white/10 cursor-pointer"
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] w-full">
@@ -107,6 +90,34 @@ export default function TableRentalPage() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-[#B48E4B] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Paired Section */}
+      <section className="py-24 bg-[#131B2E] border-y border-white/5 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+          <div className="lg:w-1/2 space-y-8">
+            <h2 className="text-4xl md:text-5xl font-black text-white uppercase italic tracking-tighter leading-tight">
+              Perfectly paired with our <span className="text-[#B48E4B]">Dome Tents</span>
+            </h2>
+            <p className="text-gray-400 text-lg font-bold italic opacity-90 leading-relaxed">
+              Our Dome Tents provide the ultimate shelter for large outdoor events, festivals, and
+              street parties. Pair our high-quality tables with these premium structures to create
+              a professional and comfortable environment for thousands of guests.
+            </p>
+            <Link href="/portable-tent/dome-tent" className="inline-block px-10 py-4 btn-golden text-sm">
+              Explore Dome Tents
+            </Link>
+          </div>
+          <div className="lg:w-1/2 relative aspect-video rounded-[32px] overflow-hidden shadow-2xl border-4 border-white/5 group">
+            <Image
+              src="/photos_from_pdf/WhatsApp Image 2026-05-16 at 10.10.58 AM.jpeg"
+              alt="Dome Tent with table setup"
+              fill
+              className="object-cover transition-transform duration-1000 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
           </div>
         </div>
       </section>
